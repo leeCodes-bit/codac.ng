@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	
-	'hostname' => 'localhost:3306',
-	'username' => 'codacng_SuperAdmin',
-	'password' => 'SuperAdmin*123',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'codacng_codacdb',
 	
 	'dbdriver' => 'mysqli',
