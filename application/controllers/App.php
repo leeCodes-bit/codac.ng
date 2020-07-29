@@ -23,6 +23,18 @@ class App extends CI_Controller
 		// }
 		
 	}
+
+	// new pages hayjay
+	public function courseInfo() {
+		$this->load->view('courseInfo');
+		// the route for this will be localhost/codac.ng/app/courseInfo
+		// you missed /app after localhost
+		
+	}
+
+	// end of new pages footer links
+
+	
 	public function index()
 	{
 		$this->load->view('index');
