@@ -23,10 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost/codac/';
+$config['base_url'] = 'http://localhost/codac.ng/';
 // $config['base_url'] = 'https://codactest.herokuapp.com/';
 // $config['base_url'] = 'http://codac.pulaakutrade.com/';
-$config['base_url'] = 'https://dev.codac.ng/';
+// $config['base_url'] = 'https://dev.codac.ng/';
 
 /*
 |--------------------------------------------------------------------------
