@@ -747,6 +747,30 @@ class App extends CI_Controller
 
 
 
+
+	public function faq() {
+		$this->load->view('faq');
+	}
+
+	public function blog() {
+		$this->load->view('blog');
+	}
+
+	public function newspress() {
+		$this->load->view('newspress');
+	}
+
+	public function referfriend() {
+		$this->load->view('refer-friend');
+	}
+
+	public function testimony() {
+		$this->load->view('testimony');
+	}
+
+
+
+
 	function body($fullname, $activationLink)
 	// function body()
 	{

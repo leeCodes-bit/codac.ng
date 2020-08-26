@@ -67,7 +67,7 @@
             <!-- MOBILE VIEW -->
             <div class="mobile">
                 <li class="mobile-logo">
-                    <a href="#" class="nav-link navbar-brand">CODEC</a>
+                    <a href="#" class="nav-link navbar-brand">CODAC</a>
                 </li>
                 <ul>
                     <li class="togglenav">
