@@ -35,7 +35,7 @@
 
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-	<title>Codac | Faq</title>
+	<title>Codac | Course Info</title>
 </head>
 <body>
 <body id="home">

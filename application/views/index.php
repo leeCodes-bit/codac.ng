@@ -36,7 +36,7 @@
 
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-	<title>Codec | E-learning</title>
+	<title>Codac | E-learning</title>
 </head>
 
 <body id="home">
@@ -81,8 +81,9 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-lg-6 col-sm-12 hero__courses text-center">
-
+					<div class="col-lg-8 col-sm-12 hero__courses text-center">
+          <img src="<?php echo base_url(); ?>assets/img/group.png" alt="">
+<!-- 
 						<div class="row px-1">
 							<div class="col-sm-1-12 hero__courses-item tech mr-3 mb-3">
 								<div class="card">
@@ -134,9 +135,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
-						<div class="row px-1">
+						<!-- <div class="row px-1">
 							<div class="col-xs-1-12 hero__courses-item market mr-3">
 								<div class="card">
 									<div class="card-body">
@@ -161,7 +162,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -1529,10 +1530,10 @@
 				<div class="footer__copyright text-light py-3">
 
 					<ul class="copyright__links">
-						<h5 class="title">CODEC</h5>
+						<h5 class="title">CODAC</h5>
 						<li class="nav-item">
 							<a href="#" class="nav-link">
-								&copy; Codec 2019
+								&copy; Codac 2019
 							</a>
 						</li>
 						<li class="nav-item">

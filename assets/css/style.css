@@ -550,7 +550,7 @@
 .hero__bg {
   background: -webkit-gradient(linear, left top, right top, color-stop(0, #232021), to(#004fef));
   background: linear-gradient(90deg, #232021 0, #004fef);
-  padding: 80px 1rem;
+  padding: 80px 1rem !important;
   position: relative;
 }
 
@@ -620,7 +620,9 @@
   display: inline-block;
   font-size: 2.5rem;
 }
-
+.hero__courses img{
+  /* margin-top: -50px; */
+}
 .tech:hover {
   border-top: 4px solid #004fef;
 }
