@@ -45,6 +45,7 @@
 					<li><a href="#">Continue Learning</a></li>
 					<li><a href="#">Learner Record</a></li>
 					<li><a href="#">Learner Report</a></li>
+					<li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ class Admin extends CI_Controller
 	{
 		if($this->session->userdata("adminId") == "") {
 			redirect(base_url().'admin/login');
-		}		
+		}
 	}
 
 	public function index()
@@ -152,21 +152,53 @@ class Admin extends CI_Controller
 
 	public function students()
 	{
+		$this->auth();
 		$this->load->view('admin/students');
 	}
 
 	public function tutors()
 	{
+		$this->auth();
 		$this->load->view('admin/tutors');
+	}
+
+	public function viewTutor($id) {
+		$this->auth();
+		$data = array(
+			'userId' => $id
+		);
+		$this->load->view('admin/view-tutor', $data);
+	}
+
+	public function approveTutorApplication($id) {
+		$data = array(
+			'tutor_approved' => 2
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $id);
+		$res = $this->db->update('users');
+		redirect(base_url().'view-tutor/'.$id.'?success');
+	}
+
+	public function declineTutorApplication($id) {
+		$data = array(
+			'tutor_approved' => 1
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $id);
+		$res = $this->db->update('users');
+		redirect(base_url().'view-tutor/'.$id.'?success');
 	}
 
 	public function admins()
 	{
+		$this->auth();
 		$this->load->view('admin/admins');
 	}
 
 	public function profile()
 	{
+		$this->auth();
 		$this->load->view('admin/profile');
 	}
 
