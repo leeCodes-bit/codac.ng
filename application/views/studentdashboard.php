@@ -164,7 +164,7 @@
 		<div class="user_details">
 			<img src="<?php echo base_url(); ?>assets/img/user.png" alt="">
 			<div class="user_btn">
-				<p class="name"><?php echo $this->input->cookie('fullname',true); ?></p>
+				<p class="name"><?php echo $this->input->cookie('fullname', true); ?></p>
 				<a href="#">
 					<button class="btn btn-danger">View Profile</button>
 				</a>
@@ -441,7 +441,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url(); ?>assets/js/nav.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/studentdash.js"></script>
 
 </body>
