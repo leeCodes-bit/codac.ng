@@ -86,5 +86,12 @@ $route['uploadPictureAction'] = 'app/uploadPictureAction';
 $route['apply_for_approval'] = 'app/applyForApproval';
 
 
+
+// admin
+$route['view-tutor/(:any)'] = 'admin/viewTutor/$1';
+$route['approve-tutor-application/(:any)'] = 'admin/approveTutorApplication/$1';
+$route['decline-tutor-application/(:any)'] = 'admin/declineTutorApplication/$1';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

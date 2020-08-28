@@ -33,7 +33,7 @@
             <a href="#?role=student">
                 <button class="btn btn-lg btn-outline-light" data-target="#loginModal" data-toggle="modal">Log In</button>
             </a>
-            <a href="#" class="ml-lg-5">
+            <a href="<?php echo base_url(); ?>tutors" class="ml-lg-5">
                 <button class="btn btn-lg btn-danger">Instructors</button>
             </a>
         </div>

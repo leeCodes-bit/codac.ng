@@ -3,9 +3,9 @@
     <h1>Administrator</h1>
     <nav>
         <!-- <a id="time">10:10</a> -->
-        <a href="profile.php"><img src="<?php echo base_url(); ?>assets/admin/images/user.png" alt="dp"></a>
+        <a href="#"><img src="<?php echo base_url(); ?>assets/admin/images/user.png" alt="dp"></a>
         <a href="#"><i class="fas fa-bell"></i><span id="notification">4</span></a>
-        <a href="#"> <i class="fas fa-sign-out-alt"></i></a>
+        <a href="<?php echo base_url(); ?>admin/logout"> <i class="fas fa-sign-out-alt"></i></a>
 
     </nav>
 </header>
