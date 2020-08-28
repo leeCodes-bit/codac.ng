@@ -39,11 +39,15 @@
                     <div class="auth__buttons">
 
                         <a href="#?role=student">
-                            <button class="btn btn-success signup-btn signupbtn" data-id="student" data-target="#signupModal" data-toggle="modal">Sign Up</button>
+                            <button class="btn btn-success signup-btn signupbtn" data-id="student" data-target="#signupModal" data-toggle="modal" onclick="getRole('Student')">Sign Up</button>
                         </a>
 
                         <a href="#?role=student">
-                            <button class="btn text-light login-btn" data-target="#loginModal" data-toggle="modal">Log In</button>
+                            <button class="btn text-light login-btn" data-target="#loginModal" data-toggle="modal" onclick="getRole('Student')">Log In</button>
+                        </a>
+
+                        <a href="<?php echo base_url(); ?>tutors">
+                            <button class="btn btn-danger signup-btn signupbtn" data-id="student">Instructors</button>
                         </a>
 
                         <span class="language">

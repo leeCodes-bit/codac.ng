@@ -21,7 +21,7 @@
                 <section class="main_board">
                     <!-- <section>Hello world</section> -->
                     <section class="table">
-                    
+
                         <h3>Tutors Information</h3>
                         <p class="control">
                             <button class="active" id="active">Active Tutors</button>
@@ -34,9 +34,40 @@
                                         <th>S/N</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Phone Number</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
+                                </tbody>
+                                <tbody>
+                                  <?php
+                                    $query = $this->db->get_where('users', array("role" => "teacher"));
+                                    if($this->db->affected_rows() > 0) {
+                                      // admins found
+                                      $sn = 1;
+                                      foreach($query->result() as $user) {
+                                        echo '
+                                        <tr>
+                                            <td>'.$sn.'</td>
+                                            <td>'.$user->fullname.'</td>
+                                            <td>'.$user->email.'</td>
+                                            <td>';
+                                              if($user->tutor_approved == 0) echo 'Not Applied';
+                                              else if($user->tutor_approved == 1) echo 'Pending';
+                                              else if($user->tutor_approved == 2) echo 'Approved';
+                                            echo '</td>
+                                            <td>
+                                              <span><a href="'.base_url().'view-tutor/'.$user->user_id.'">View</a></span> |
+                                              <span><a href="#">Deactivate</a></span> |
+                                              <span><a href="#">Approve</a></span>
+                                            </td>
+                                        </tr>';
+                                        $sn++;
+                                      }
+                                    } else {
+                                      // no admin found
+                                      echo '<h3 style="color:red;">No Tutor Found</h3>';
+                                    }
+                                  ?>
                                 </tbody>
                             </table>
                         </div>

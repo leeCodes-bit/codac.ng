@@ -77,7 +77,7 @@
                 <span class="hero__green mr-1">Lorem ipsum dolor</span>sit amet consectetur adipisicing elit. Eligendi, iste.
               </p>
               <a href="#?role=student">
-                <button class="signup__btn btn btn-success px-5 mt-3 py-2" data-target="#signupModal" data-toggle="modal">Sign up now</button>
+                <button class="signup__btn btn btn-success px-5 mt-3 py-2" data-target="#signupModal" data-toggle="modal" onclick="getRole('Student')">Sign up now</button>
               </a>
             </div>
           </div>
