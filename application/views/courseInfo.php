@@ -107,6 +107,9 @@
 					<li>You will need Microsoft Excel 2010, 2013, 2016, or 2020</li>
 				</ul>
 			</div>
+			<div class="course-content">
+				
+			</div>
 		</div>
 <!-- FOOTER SECTION -->
 <section id="footer" class="footer w-100">
@@ -215,10 +218,10 @@
 				<div class="footer__copyright text-light py-3">
 
 					<ul class="copyright__links">
-						<h5 class="title">CODEC</h5>
+						<h5 class="title">CODAC</h5>
 						<li class="nav-item">
 							<a href="#" class="nav-link">
-								&copy; Codec 2019
+								&copy; Codac 2019
 							</a>
 						</li>
 						<li class="nav-item">

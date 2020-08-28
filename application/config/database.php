@@ -79,14 +79,8 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
 	'database' => 'codac',
-	
-	
-=======
-	'database' => 'codacng_codacdb',
 
->>>>>>> 556a6b0e0c4f93ea166485801d84ec29460c8c75
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

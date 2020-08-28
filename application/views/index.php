@@ -35,13 +35,8 @@
 
 
 
-<<<<<<< HEAD
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-	<title>Codac | E-learning</title>
-=======
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
   <title>Codec | E-learning</title>
->>>>>>> 556a6b0e0c4f93ea166485801d84ec29460c8c75
 </head>
 
 <body id="home">
@@ -1534,10 +1529,10 @@
         <div class="footer__copyright text-light py-3">
 
           <ul class="copyright__links">
-            <h5 class="title">CODEC</h5>
+            <h5 class="title">CODAC</h5>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                &copy; Codec 2019
+                &copy; Codac 2019
               </a>
             </li>
             <li class="nav-item">
