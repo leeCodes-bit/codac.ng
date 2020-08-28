@@ -18,10 +18,10 @@ class App extends CI_Controller
 	}
 
 	public function auth() {
-		// if ($this->input->cookie('userId', true) == '') {
-		// 	redirect(base_url());
-		// }
-		
+		if ($this->input->cookie('userId', true) == '') {
+			redirect(base_url());
+		}
+
 	}
 
 	// new pages hayjay
@@ -47,7 +47,7 @@ class App extends CI_Controller
 
 	public function course($id)
 	{
-		$this->auth();
+		// $this->auth();
 
 		$query = $this->db->get_where('courses', array("course_id" => $id));
 		if ($this->db->affected_rows() > 0) {
@@ -58,7 +58,7 @@ class App extends CI_Controller
 				$courseId = $course['course_id'];
 			}
 		} else {
-			// course does not exist, 
+			// course does not exist,
 			echo '<h3>Resource Not Found.</h3>';
 			exit();
 		}
@@ -115,7 +115,10 @@ class App extends CI_Controller
 
 		// check length of fullname
 		if (strlen($fullname) < 4) {
-			echo '<li class="error">Your fullname must have at least 4 characters</li>';
+			echo '<div class="alert alert-danger alert-dismissible">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>Error!</strong> Your fullname must have at least 4 characters.
+			</div>';
 			$clean = false;
 		}
 
@@ -123,7 +126,10 @@ class App extends CI_Controller
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 			// email pattern is not valid
-			echo '<li class="error">Please enter a valid Email Address</li>';
+			echo '<div class="alert alert-danger alert-dismissible">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>Error!</strong> Enter a valid Email Address.
+			</div>';
 			$clean = false;
 		}
 
@@ -132,13 +138,19 @@ class App extends CI_Controller
 		if ($this->db->affected_rows() > 0) {
 
 			// email is already in use
-			echo '<li class="error">Email Address is already in use</li>';
+			echo '<div class="alert alert-danger alert-dismissible">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>Error!</strong> Email Address is already in use.
+			</div>';
 			$clean = false;
 		}
 
 		// check length of password
 		if (strlen($password) < 6) {
-			echo '<li class="error">You password must have at least 6 characters</li>';
+			echo '<div class="alert alert-danger alert-dismissible">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>Error!</strong> You password must have at least 6 characters.
+			</div>';
 			$clean = false;
 		}
 
@@ -156,7 +168,12 @@ class App extends CI_Controller
 			);
 			$this->db->set('date_time', 'NOW()', FALSE);
 			$this->db->insert('users', $tutorData);
-			echo '<div class="success">Your registration was successfull, Check your mail for a confirmation link</li>';
+			// echo '<div class="success">Your registration was successfull, Check your mail for an activation link</li>';
+
+			echo '<div class="alert alert-success alert-dismissible">
+			  <button type="button" class="close" data-dismiss="alert">&times;</button>
+			  <strong>Success!</strong> Your registration was successfull, Check your inbox ('.$email.') for instructions to activate your account.
+			</div>';
 
 			// send mail here
 
@@ -164,16 +181,12 @@ class App extends CI_Controller
 			$activationLink = base_url() . 'activateAccount/' . $activation_code;
 
 			// Email body content
-			//     $body = '<h1>Welcome to Codac</h1>
-			// <p>Click on the button to activate your account</p>
-			// <a href="'.$activationLink.'"><button>Activate Your Account</button></a>';
+			$message = '<h1>Your Account was successfully Created</h1>
+			<p>Click <a href="'.$activationLink.'"> here to Activate Your Account</a></p>
+			<p>If you have problems clicking on the link, copy and paste this url: '.$activationLink.' in the address bar or your browser</p>
+			';
 
-			// $body = "Click here " . $activationLink . " to activate your account.";
-
-			// $response = $emailObj->sendMail($email, "test@codac.pulaakutrade.com", "Codac", "Activate Your Account",  $body); 
-			$message = 'Activate Your account';
-
-			// $this->send($email, 'Activate Your Account', $body); 
+			// $this->send($email, 'Activate Your Account', $body);
 
 
 			$body = $this->body($fullname, $activationLink);
@@ -183,8 +196,7 @@ class App extends CI_Controller
 			$this->email->to($email);
 			$this->email->bcc('john.ebri@yahoo.com');
 			$this->email->subject('Activate Your Account');
-			$this->email->message($body);
-
+			$this->email->message($message);
 			$this->email->send();
 
 			// clear the form
@@ -225,7 +237,7 @@ class App extends CI_Controller
 			$message = $this->passwordReset($fullname, $link);
 			$this->load->library('email');
 			$this->email->from('noreply@codac.ng', 'CODAC');
-			$this->email->to($email);			
+			$this->email->to($email);
 			$this->email->bcc('john.ebri@yahoo.com');
 			$this->email->subject('Reset Your Password');
 			$this->email->message($message);
@@ -305,7 +317,7 @@ class App extends CI_Controller
 			$errors['code'] = $code;
 			$this->load->view('resetpassword', $errors);
 		}
-		
+
 	}
 
 	public function dashboard()
@@ -314,7 +326,7 @@ class App extends CI_Controller
 		$this->load->view('dashboard');
 	}
 
-	public function applyForApproval() {		
+	public function applyForApproval() {
 		$data = array(
 			'tutor_id' => $this->input->post('tutor_id'),
 			'linkedin_link' => $this->input->post('linkedin_link'),
@@ -474,8 +486,22 @@ class App extends CI_Controller
 				}
 
 				if ($selectedRole != $role) {
-					echo '<li class="error">You do not have access to login as a trainer</li>';
-					return false;
+					if($role == 'student') {
+						echo '<div class="alert alert-danger alert-dismissible">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>Error!</strong> You do not have access to login as an Instructor.
+							<a href="'.base_url().'">Back to Student portal</a>
+						</div>';
+						return false;
+					} else {
+						echo '<div class="alert alert-danger alert-dismissible">
+						  <button type="button" class="close" data-dismiss="alert">&times;</button>
+						  <strong>Error!</strong> You do not have access to login as a Student.
+							<a href="'.base_url().'/tutors">Instructor Portal</a>
+						</div>';
+						return false;
+
+					}
 				}
 
 				if (password_verify($password, $hashedPassword)) {
@@ -632,13 +658,13 @@ class App extends CI_Controller
 		$config['max_size'] = 10000;
 		$config['max_width'] = 1500;
 		$config['max_height'] = 1500;
-	
+
 		$this->load->library('upload', $config);
-	
+
 		if(empty($_FILES[$fieldName]['name'])) {
 			return "";
 		}
-	
+
 		if (!$this->upload->do_upload($fieldName)) {
 			$error = array('error' => $this->upload->display_errors());
 			return $error;
@@ -653,7 +679,7 @@ class App extends CI_Controller
 	public function uploadPictureAction() {
 
 		$this->auth();
-		
+
 		$result = $this->uploadPhoto('profilePicture');
 		if( (is_array($result))  ) {
 			// image was not uploaded, show error messages
@@ -670,7 +696,7 @@ class App extends CI_Controller
 			$this->db->set($data);
 			$this->db->where('user_id', $this->input->cookie('userId', true));
 			$updateRes = $this->db->update('users');
-			
+
 			if($updateRes > 0) {
 				redirect(base_url().'studentProfile?success');
 			} else {
@@ -792,21 +818,21 @@ class App extends CI_Controller
 		<html>
 		<head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 		<meta name='viewport' content='width=device-width' />
-		
+
 		<title>Simple Transactional Email</title>
 		<style>
 			/* -------------------------------------
 			GLOBAL RESETS
 			------------------------------------- */
-			
+
 			/*All the styling goes here*/
-			
+
 			img {
 				border: none;
 				-ms-interpolation-mode: bicubic;
 				max-width: 100%;
 			}
-			
+
 			body {
 				background-color: #f6f6f6;
 				font-family: sans-serif;
@@ -818,7 +844,7 @@ class App extends CI_Controller
 				-ms-text-size-adjust: 100%;
 				-webkit-text-size-adjust: 100%;
 			}
-			
+
 			table {
 				border-collapse: separate;
 				mso-table-lspace: 0pt;
@@ -829,16 +855,16 @@ class App extends CI_Controller
 				font-size: 14px;
 				vertical-align: top;
 			}
-			
+
 			/* -------------------------------------
 			BODY & CONTAINER
 			------------------------------------- */
-			
+
 			.body {
 				background-color: #f6f6f6;
 				width: 100%;
 			}
-			
+
 			/ Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something /
 			.container {
 				display: block;
@@ -848,7 +874,7 @@ class App extends CI_Controller
 				padding: 10px;
 				width: 580px;
 			}
-			
+
 			/ This should also be a block element, so that it will fill 100% of the .container /
 			.content {
 				box-sizing: border-box;
@@ -857,7 +883,7 @@ class App extends CI_Controller
 				max-width: 580px;
 				padding: 10px;
 			}
-			
+
 			/* -------------------------------------
 			HEADER, FOOTER, MAIN
 			------------------------------------- */
@@ -866,17 +892,17 @@ class App extends CI_Controller
 			border-radius: 3px;
 			width: 100%;
 			}
-			
+
 			.wrapper {
 				box-sizing: border-box;
 				padding: 20px;
 			}
-			
+
 			.content-block {
 				padding-bottom: 10px;
 				padding-top: 10px;
 			}
-			
+
 			.footer {
 				clear: both;
 				margin-top: 10px;
@@ -891,7 +917,7 @@ class App extends CI_Controller
 				font-size: 12px;
 				text-align: center;
 			}
-			
+
 			/* -------------------------------------
 			TYPOGRAPHY
 			------------------------------------- */
@@ -906,14 +932,14 @@ class App extends CI_Controller
 				margin: 0;
 				margin-bottom: 30px;
 			}
-			
+
 			h1 {
 				font-size: 35px;
 				font-weight: 300;
 				text-align: center;
 				text-transform: capitalize;
 			}
-			
+
 			p,
 			ul,
 			ol {
@@ -929,12 +955,12 @@ class App extends CI_Controller
 				list-style-position: inside;
 				margin-left: 5px;
 			}
-			
+
 			a {
 				color: #3498db;
 				text-decoration: underline;
 			}
-			
+
 			/* -------------------------------------
 			BUTTONS
 			------------------------------------- */
@@ -966,52 +992,52 @@ class App extends CI_Controller
 				text-decoration: none;
 				text-transform: capitalize;
 			}
-			
+
 			.btn-primary table td {
 				background-color: #3498db;
 			}
-			
+
 			.btn-primary a {
 				background-color: #3498db;
 				border-color: #3498db;
 				color: #ffffff;
 			}
-			
+
 			/* -------------------------------------
 			OTHER STYLES THAT MIGHT BE USEFUL
 			------------------------------------- */
 			.last {
 				margin-bottom: 0;
 			}
-			
+
 			.first {
 				margin-top: 0;
 			}
-			
+
 			.align-center {
 				text-align: center;
 			}
-			
+
 			.align-right {
 				text-align: right;
 			}
-			
+
 			.align-left {
 				text-align: left;
 			}
-			
+
 			.clear {
 				clear: both;
 			}
-			
+
 			.mt0 {
 				margin-top: 0;
 			}
-			
+
 			.mb0 {
 				margin-bottom: 0;
 			}
-			
+
 			.preheader {
 				color: transparent;
 				display: none;
@@ -1024,17 +1050,17 @@ class App extends CI_Controller
 				visibility: hidden;
 				width: 0;
 			}
-			
+
 			.powered-by a {
 				text-decoration: none;
 			}
-			
+
 			hr {
 				border: 0;
 				border-bottom: 1px solid #f6f6f6;
 				margin: 20px 0;
 			}
-			
+
 			/* -------------------------------------
 			RESPONSIVE AND MOBILE FRIENDLY STYLES
 			------------------------------------- */
@@ -1079,7 +1105,7 @@ class App extends CI_Controller
 				width: auto !important;
 			}
 			}
-			
+
 			/* -------------------------------------
 			PRESERVE THESE STYLES IN THE HEAD
 			------------------------------------- */
@@ -1119,7 +1145,7 @@ class App extends CI_Controller
 				border-color: #34495e !important;
 				}
 			}
-			
+
 		</style>
 		</head>
 		<body class=''>
@@ -1129,10 +1155,10 @@ class App extends CI_Controller
 			<td>&nbsp;</td>
 			<td class='container'>
 			<div class='content'>
-			
+
 			<!-- START CENTERED WHITE CONTAINER -->
 			<table role='presentation' class='main'>
-			
+
 			<!-- START MAIN CONTENT AREA -->
 			<tr>
 			<td class='wrapper'>
@@ -1149,7 +1175,7 @@ class App extends CI_Controller
 			<table role='presentation' border='0' cellpadding='0' cellspacing='0'>
 			<tbody>
 			<tr>
-			<td> <a href='$activationLink' target='_blank'>ACTIVATE</a> 
+			<td> <a href='$activationLink' target='_blank'>ACTIVATE</a>
 				or copy and paste this link in your browser
 			</td>
 			</tr>
@@ -1171,18 +1197,18 @@ class App extends CI_Controller
 			</table>
 			</td>
 			</tr>
-			
+
 			<!-- END MAIN CONTENT AREA -->
 			</table>
 			<!-- END CENTERED WHITE CONTAINER -->
-			
+
 			<!-- START FOOTER -->
 			<div class='footer'>
 			<table role='presentation' border='0' cellpadding='0' cellspacing='0'>
 			<tr>
 			<td class='content-block'>
 			<span class='apple-link'>Lagos, Nigeria</span>
-			
+
 			</td>
 			</tr>
 			<tr>
@@ -1193,7 +1219,7 @@ class App extends CI_Controller
 			</table>
 			</div>
 			<!-- END FOOTER -->
-			
+
 			</div>
 			</td>
 			<td>&nbsp;</td>
@@ -1201,7 +1227,7 @@ class App extends CI_Controller
 			</table>
 		</body>
 		</html>
-    
+
     	";
 		return $body;
 	}
@@ -1218,21 +1244,21 @@ class App extends CI_Controller
 		<html>
 		<head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 		<meta name='viewport' content='width=device-width' />
-		
+
 		<title>Simple Transactional Email</title>
 		<style>
 			/* -------------------------------------
 			GLOBAL RESETS
 			------------------------------------- */
-			
+
 			/*All the styling goes here*/
-			
+
 			img {
 				border: none;
 				-ms-interpolation-mode: bicubic;
 				max-width: 100%;
 			}
-			
+
 			body {
 				background-color: #f6f6f6;
 				font-family: sans-serif;
@@ -1244,7 +1270,7 @@ class App extends CI_Controller
 				-ms-text-size-adjust: 100%;
 				-webkit-text-size-adjust: 100%;
 			}
-			
+
 			table {
 				border-collapse: separate;
 				mso-table-lspace: 0pt;
@@ -1255,16 +1281,16 @@ class App extends CI_Controller
 				font-size: 14px;
 				vertical-align: top;
 			}
-			
+
 			/* -------------------------------------
 			BODY & CONTAINER
 			------------------------------------- */
-			
+
 			.body {
 				background-color: #f6f6f6;
 				width: 100%;
 			}
-			
+
 			/ Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something /
 			.container {
 				display: block;
@@ -1274,7 +1300,7 @@ class App extends CI_Controller
 				padding: 10px;
 				width: 580px;
 			}
-			
+
 			/ This should also be a block element, so that it will fill 100% of the .container /
 			.content {
 				box-sizing: border-box;
@@ -1283,7 +1309,7 @@ class App extends CI_Controller
 				max-width: 580px;
 				padding: 10px;
 			}
-			
+
 			/* -------------------------------------
 			HEADER, FOOTER, MAIN
 			------------------------------------- */
@@ -1292,17 +1318,17 @@ class App extends CI_Controller
 			border-radius: 3px;
 			width: 100%;
 			}
-			
+
 			.wrapper {
 				box-sizing: border-box;
 				padding: 20px;
 			}
-			
+
 			.content-block {
 				padding-bottom: 10px;
 				padding-top: 10px;
 			}
-			
+
 			.footer {
 				clear: both;
 				margin-top: 10px;
@@ -1317,7 +1343,7 @@ class App extends CI_Controller
 				font-size: 12px;
 				text-align: center;
 			}
-			
+
 			/* -------------------------------------
 			TYPOGRAPHY
 			------------------------------------- */
@@ -1332,14 +1358,14 @@ class App extends CI_Controller
 				margin: 0;
 				margin-bottom: 30px;
 			}
-			
+
 			h1 {
 				font-size: 35px;
 				font-weight: 300;
 				text-align: center;
 				text-transform: capitalize;
 			}
-			
+
 			p,
 			ul,
 			ol {
@@ -1355,12 +1381,12 @@ class App extends CI_Controller
 				list-style-position: inside;
 				margin-left: 5px;
 			}
-			
+
 			a {
 				color: #3498db;
 				text-decoration: underline;
 			}
-			
+
 			/* -------------------------------------
 			BUTTONS
 			------------------------------------- */
@@ -1392,52 +1418,52 @@ class App extends CI_Controller
 				text-decoration: none;
 				text-transform: capitalize;
 			}
-			
+
 			.btn-primary table td {
 				background-color: #3498db;
 			}
-			
+
 			.btn-primary a {
 				background-color: #3498db;
 				border-color: #3498db;
 				color: #ffffff;
 			}
-			
+
 			/* -------------------------------------
 			OTHER STYLES THAT MIGHT BE USEFUL
 			------------------------------------- */
 			.last {
 				margin-bottom: 0;
 			}
-			
+
 			.first {
 				margin-top: 0;
 			}
-			
+
 			.align-center {
 				text-align: center;
 			}
-			
+
 			.align-right {
 				text-align: right;
 			}
-			
+
 			.align-left {
 				text-align: left;
 			}
-			
+
 			.clear {
 				clear: both;
 			}
-			
+
 			.mt0 {
 				margin-top: 0;
 			}
-			
+
 			.mb0 {
 				margin-bottom: 0;
 			}
-			
+
 			.preheader {
 				color: transparent;
 				display: none;
@@ -1450,17 +1476,17 @@ class App extends CI_Controller
 				visibility: hidden;
 				width: 0;
 			}
-			
+
 			.powered-by a {
 				text-decoration: none;
 			}
-			
+
 			hr {
 				border: 0;
 				border-bottom: 1px solid #f6f6f6;
 				margin: 20px 0;
 			}
-			
+
 			/* -------------------------------------
 			RESPONSIVE AND MOBILE FRIENDLY STYLES
 			------------------------------------- */
@@ -1505,7 +1531,7 @@ class App extends CI_Controller
 				width: auto !important;
 			}
 			}
-			
+
 			/* -------------------------------------
 			PRESERVE THESE STYLES IN THE HEAD
 			------------------------------------- */
@@ -1545,7 +1571,7 @@ class App extends CI_Controller
 				border-color: #34495e !important;
 				}
 			}
-			
+
 		</style>
 		</head>
 		<body class=''>
@@ -1555,10 +1581,10 @@ class App extends CI_Controller
 			<td>&nbsp;</td>
 			<td class='container'>
 			<div class='content'>
-			
+
 			<!-- START CENTERED WHITE CONTAINER -->
 			<table role='presentation' class='main'>
-			
+
 			<!-- START MAIN CONTENT AREA -->
 			<tr>
 			<td class='wrapper'>
@@ -1575,7 +1601,7 @@ class App extends CI_Controller
 			<table role='presentation' border='0' cellpadding='0' cellspacing='0'>
 			<tbody>
 			<tr>
-			<td> <a href='$activationLink' target='_blank'>Reset Password</a> 
+			<td> <a href='$activationLink' target='_blank'>Reset Password</a>
 				or &nbsp;&nbsp;&nbsp; copy and paste this link in your browser
 			</td>
 			</tr>
@@ -1597,18 +1623,18 @@ class App extends CI_Controller
 			</table>
 			</td>
 			</tr>
-			
+
 			<!-- END MAIN CONTENT AREA -->
 			</table>
 			<!-- END CENTERED WHITE CONTAINER -->
-			
+
 			<!-- START FOOTER -->
 			<div class='footer'>
 			<table role='presentation' border='0' cellpadding='0' cellspacing='0'>
 			<tr>
 			<td class='content-block'>
 			<span class='apple-link'>Lagos, Nigeria</span>
-			
+
 			</td>
 			</tr>
 			<tr>
@@ -1619,7 +1645,7 @@ class App extends CI_Controller
 			</table>
 			</div>
 			<!-- END FOOTER -->
-			
+
 			</div>
 			</td>
 			<td>&nbsp;</td>
@@ -1627,7 +1653,7 @@ class App extends CI_Controller
 			</table>
 		</body>
 		</html>
-    
+
     	";
 		return $body;
 	}

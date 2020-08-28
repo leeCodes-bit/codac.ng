@@ -37,6 +37,18 @@
 
 <!-- jquery function for signup -->
 <script type="text/javascript">
+	// display approrpriate role on the modal form
+	function getRole(args) {
+		let dispRole = args;
+		if(args === 'Student') {
+			document.getElementById('login-role').textContent = 'Login to your Student Account';
+			document.getElementById('signup-role').textContent = 'Create a Student Account';
+		} else if(args === 'Instructor') {
+			document.getElementById('login-role').textContent = 'Login to your Instructor Account';
+			document.getElementById('signup-role').textContent = 'Become an Instructor';
+		}
+	}
+
 	function login() {
 		// loading starts
 		let login_button = document.getElementById('login_button');
@@ -107,7 +119,7 @@
 	function login() {
 
 		const url = window.location.href;
-		var role = url.split("=").pop(); 
+		var role = url.split("=").pop();
 
 		// loading starts
 		let submit_button = document.getElementById('submit_button');
@@ -162,7 +174,7 @@
 				jQuery('#forgotPasswordResult').html(data);
 		});
 	}
-	
+
 </script>
 
 <style type="text/css">
@@ -177,10 +189,11 @@
 
 <!-- LOGIN Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Log in to Your Codec Account</h5>
+				<h5 class="modal-title" id="exampleModalLabel"><span id="login-role"></span></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -230,7 +243,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Become a Codec Instructor!</h5>
+				<h5 class="modal-title" id="exampleModalLabel"><span id="signup-role"></span></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -308,7 +321,7 @@
      </div>
      <div class="modal-body">
 
-      <form method="post" id="signupform" class="mt-1"> 
+      <form method="post" id="signupform" class="mt-1">
 
        <div class="form-group">
         <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quod amet sint odio
@@ -318,22 +331,22 @@
 
 			 <ul id="result"></ul>
 
-			 
 
-			 <input type="hidden" id="sub_value" value="" />			
+
+			 <input type="hidden" id="sub_value" value="" />
 
        <div class="form-group">
         <input type="text" name="fullname" id="fullname" placeholder="Full Name">
 			 </div>
-			 
+
        <div class="form-group">
         <input type="email" name="email" id="email" placeholder="Email">
 			 </div>
-			 
+
        <div class="form-group">
         <input type="password" name="password" id="password" placeholder="Password">
 			 </div>
-			 
+
        <div class="form-check">
 
 				<input type="checkbox" name="subscription" class="form-check-input" id="subscription" onclick="toggleSubscription()">
@@ -343,17 +356,17 @@
          updates and promotions reserved for instructors.
         </label>
 			 </div>
-			 
-       <div class="form-group">				
+
+       <div class="form-group">
 				<button type="button" class="mt-2 btn btn-lg btn-block btn-danger" name="submit_button" id="submit_button" onclick='signup("student")'>
 					<span id="loader" style="display:none;">
 						<img src="<?php echo base_url(); ?>assets/loader.gif" style="width: 30px; height: 30px;" />
 					</span>
 					<span id="buttonText">Sign Up</span>
 				</button>
-			 </div>			 
+			 </div>
 			</form>
-			
+
       </form>
       <div class="modal-footer text-center">
        <small>By signing up, you agree to our

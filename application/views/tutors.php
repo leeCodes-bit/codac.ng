@@ -111,11 +111,11 @@
         </div>
 
         <a href="#?role=teacher">
-          <button class="btn btn-md btn-outline-secondary btn-login" data-target="#loginModal" data-toggle="modal" type="button">Log In</button>
+          <button class="btn btn-md btn-outline-secondary btn-login" data-target="#loginModal" data-toggle="modal" onclick="getRole('Instructor')" type="button">Log In</button>
         </a>
 
         <a href="#?role=teacher">
-          <button class="btn btn-md btn-danger btn-signup signupbtn" data-id="teacher" data-target="#signupModal" data-toggle="modal" type="button">Sign Up</button>
+          <button class="btn btn-md btn-danger btn-signup signupbtn" data-id="teacher" data-target="#signupModal" data-toggle="modal" onclick="getRole('Instructor')" type="button">Sign Up</button>
         </a>
 
     </nav>
@@ -129,7 +129,7 @@
       <div class="hero__body">
         <h1 class="hero__main-text text-light"> Make a global impact</h1>
         <p class="hero__sub-text text-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, id.</p>
-        <a href="#?role=teacher"><button class="btn block btn-lg btn-success" data-target="#signupModal" data-toggle="modal" data-dismiss="modal">Become an instructor</button></a>
+        <a href="#?role=teacher"><button class="btn block btn-lg btn-success" data-target="#signupModal" data-toggle="modal" data-dismiss="modal" onclick="getRole('Instructor')">Become an instructor</button></a>
       </div>
     </div>
   </section>
@@ -345,7 +345,7 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
     <a href="#">
-      <button class="btn btn-lg btn-success" data-target="#signupModalTeacher" data-toggle="modal" data-dismiss="modal">Get started</button>
+      <button class="btn btn-lg btn-success" data-target="#signupModalTeacher" data-toggle="modal" data-dismiss="modal" onclick="getRole('Instructor')">Get started</button>
     </a>
   </section>
   <!-- FOOTER SECTION -->
@@ -405,6 +405,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/slick.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/tutor.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('.slide').slick({
