@@ -20,3 +20,24 @@
 .dropdown-toggle::after {
 	display: none;
 }
+
+.user--dropdown li {
+	width: 100%;
+}
+
+.user--dropdown li:not(:last-child) {
+	margin-bottom: 6px;
+}
+
+.user--dropdown a {
+	color: black;
+	font-size: 1.3rem;
+}
+
+.user--dropdown li + li a:hover {
+	color: blue;
+}
+
+.user--dropdown a i {
+	padding-right: 5px;
+}

@@ -64,7 +64,6 @@
   ?>
 
 
-
   <!--HERO BACKGROUD SECTION-->
   <section id="hero" class="hero">
     <div class="hero__bg d-flex flex-column justify-content-center">
