@@ -29,155 +29,80 @@
 
 <body>
 	<!-- HEADER SECTION -->
-	<section id="topnav" class="topnav">
-		<div class="topnav__container">
-			<div class="topnav__bg">
-				<div class="group-1">
-					<div class="topnav__logo">
-						<a href="index.php" class="navbar-brand">
-							<img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="codac logo" style="width: 44px;"></a>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
+			<img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="Codac Logo">
+		</a>
+		<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavId">
+			<ul class="navbar-nav mt-2 mt-lg-0">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-light" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Course Categories</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownId">
+						<a class="dropdown-item" href="#">Technology</a>
+						<a class="dropdown-item" href="#">Language</a>
+						<a class="dropdown-item" href="#">Science</a>
+						<a class="dropdown-item" href="#">Health</a>
+						<a class="dropdown-item" href="#">Business</a>
+						<a class="dropdown-item" href="#">Math</a>
+						<a class="dropdown-item" href="#">Marketing</a>
+						<a class="dropdown-item" href="#">Humanities</a>
+						<a class="dropdown-item" href="#">Lifestyle</a>
 					</div>
-					<div class="form-group form__search m-0">
-						<form class="form-inline my-2 my-lg-0" id="searchcourse">
-							<input maxlength="200" autocomplete="off" placeholder="Search for courses" id="autocomplete" name="search" type="text" class="form-control form-control-lg topnav__search">
-							<button class="topnav__search-btn btn btn-primary">
-								<i class="fa fa-search" aria-hidden="true"></i>
-							</button>
-						</form>
-					</div>
-				</div>
-				<div class="group-2">
-					<div class="topnav__links">
-						<ul class="topnav__links-container">
-							<li class="toggle-1">
-								<a class="text-light" href="javascript:void(0)">Lorem</a>
-								<i class="fa fa-angle-down" aria-hidden="true"></i>
-								<i class="fa fa-angle-up" aria-hidden="true"></i>
+				</li>
+			</ul>
+			<form class="form-inline my-3 ml-lg-3 my-lg-0" id="searchcourse">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+			</form>
+			<div class="auth ml-auto mr-5 d-flex flex-row align-items-center">
+				<div class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-light" href="#" id="userdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="user__pic mr-3">
+							<img src="<?php echo base_url(); ?>assets/img/user.png" alt="user" style="width: 30px;" class="user__image">
+						</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="userdropdown">
+						<ul class="text-center nav user--dropdown">
+							<li class="nav-item user--name font-weight-bold">
+								<a href="#" class="nav-link">
+									<?php echo $this->input->cookie('fullname', true); ?>
+								</a>
 							</li>
-							<li class="ml-3 toggle-2">
-								<a class="text-light" href="javascript:void(0)">Lorem Ips</a>
-								<i class="fa fa-angle-down" aria-hidden="true"></i>
-								<i class="fa fa-angle-up" aria-hidden="true"></i>
+							<li class="nav-item">
+								<a href="#">
+									<button class="btn btn-danger">View Profile</button>
+								</a>
 							</li>
-							<li class="ml-3 toggle-3">
-								<a class="text-light" href="javascript:void(0)">Lorem</a>
-								<i class="fa fa-angle-down" aria-hidden="true"></i>
-								<i class="fa fa-angle-up" aria-hidden="true"></i>
+							<li class="nav-item">
+								<a href="#" class="nav-link"><i class="far fa-play-circle"></i>Resume Study</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa fa-user"></i>My Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa fa-cog"></i>Account Settings</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="fa fa-question-circle"></i>Help </a> </li>
+							<li class="nav-item">
+								<a href="<?php echo base_url(); ?>logout" class="nav-link">
+									<i class="fa fa-power-off"></i>Logout</a>
 							</li>
 						</ul>
 					</div>
-					<div class="auth">
-						<span class="user__pic">
-							<img src="<?php echo base_url(); ?>assets/img/user.png" alt="user" style="width: 30px;" class="user__image">
-						</span>
-						<div class="notification">
-							<i class="fa fa-bell-o" aria-hidden="true"></i>
-						</div>
-						<div class="dropleft mr-2">
-							<div class="cart" id="cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-cart-plus" aria-hidden="true"></i>
-							</div>
-							<ul class="dropdown-menu pt-5 px-5" aria-labelledby="cart">
-								<hr>
-								<p class="cart-message">
-									You have nothing in your cart.Why not add something?
-								</p>
-								<a href="#">
-									<button class="btn btn-md btn__button">Shop</button>
-								</a>
-							</ul>
-						</div>
-						<div class="language__select">
-							<span class="abbriev">en</span>
-							<i class="fa fa-globe" aria-hidden="true"></i>
-						</div>
-						<!-- LANGUAGE DROPDOWN -->
-						<div class="language__globe">
-							<ul>
-								<li><a href="#">English</a></li>
-								<li><a href="#">Spanish</a></li>
-								<li><a href="#">French</a></li>
-								<li><a href="#">Italian</a></li>
-								<li><a href="#">Brazilian Portugese</a></li>
-							</ul>
-						</div>
-					</div>
+				</div>
+				<div class="notification">
+					<i class="fa fa-bell-o text-light fa-lg" aria-hidden="true"></i>
 				</div>
 			</div>
-			<div class="dropdown-1">
-				<span class="technology"> <a href="#"><i class="fa fa-laptop" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Technology </p>
-				</span>
-				<span class="language"> <a href="#"><i class="fa fa-language" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Language </p>
-				</span>
-				<span class="science"> <a href="#"><i class="fas fa-flask" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Science</p>
-				</span>
-				<span class="heartbeat"><a href="#"><i class="fa fa-heartbeat" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Health</p>
-				</span>
-				<span class="business"><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Business</p>
-				</span>
-				<span class="mathematics"> <a href="#"><i class="fas fa-square-root-alt" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Math</p>
-				</span>
-				<span class="marketing"><a href="#"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Marketing </p>
-				</span>
-				<span class="lifestyle"> <a href="#"><i class="fas fa-pray" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Lifestyle </p>
-				</span>
-				<span class="humanities"><a href="#"><i class="fa fa-universal-access" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Humanities </p>
-				</span>
-				<span class="allapp"><a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> All Categories </p>
-				</span>
-			</div>
-			<div class="dropdown-2">
-				<span>
-					<a href="#"><i class="fa fa-certificate" aria-hidden="true"></i>
-					</a>
-					<p class="hero__courses-text text-dark"> Certificate Courses</p>
-				</span>
-				<span> <a href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Diploma Courses </p>
-				</span>
-				<span> <a href="#"><i class="fas fa-wave-square" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Learning Paths</p>
-				</span>
-			</div>
-			<div class="dropdown-3">
-				<span> <a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Get Career Skills and Guidance</p>
-				</span>
-				<span> <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-					<p class="hero__courses-text text-dark"> Find Courses for Specific Jobs</p>
-				</span>
-			</div>
 		</div>
-	</section>
-	<aside class="user_menu">
-		<i class="fa fa-caret-up" aria-hidden="true"></i>
-		<div class="user_details">
-			<img src="<?php echo base_url(); ?>assets/img/user.png" alt="">
-			<div class="user_btn">
-				<p class="name"><?php echo $this->input->cookie('fullname', true); ?></p>
-				<a href="#">
-					<button class="btn btn-danger">View Profile</button>
-				</a>
-			</div>
-		</div>
-		<div class="actions">
-			<p><a href="#"><i class="far fa-play-circle"></i>Resume Study</a></p>
-			<p><a href="#"><i class="fa fa-user"></i>My Dashboard</a></p>
-			<p><a href="#"><i class="fa fa-cog"></i>Account Settings</a></p>
-			<p><a href="#"><i class="fa fa-question-circle"></i>Help</a></p>
-			<p><i class="fa fa-power-off"></i><a href="<?php echo base_url(); ?>logout">Logout</a></p>
-		</div>
-	</aside>
+	</nav>
 	<!-- DASHBOARD SECTION -->
 	<section class="dashboard">
 		<!-- SIDE BAR -->

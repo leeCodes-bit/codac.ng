@@ -28,10 +28,10 @@
         </form>
         <div class="auth ml-auto">
             <a href="<?php echo base_url(); ?>studentdashboard">
-                <button class="btn btn-lg btn-success" data-id="student" data-target="#signupModal" data-toggle="modal">My Dashboard</button>
+                <button class="btn btn-lg btn-success" data-id="student">My Dashboard</button>
             </a>
             <a href="<?php echo base_url(); ?>studentProfile">
-                <button class="btn btn-lg btn-outline-light" data-target="#loginModal" data-toggle="modal">My Profile</button>
+                <button class="btn btn-lg btn-outline-light">My Profile</button>
             </a>
             <a href="<?php echo base_url(); ?>tutors" class=" ml-lg-5">
                 <button class="btn btn-lg btn-danger">Instructors</button>
