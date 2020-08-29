@@ -62,7 +62,7 @@
         <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
         <i class="fa fa-search" onclick="openSearch()" aria-hidden="true"></i>
       </span>
-      <span class="navs__mobile-logo"><a href="index.html"><img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt=""></a></span>
+      <span class="navs__mobile-logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt=""></a></span>
       <div class="btn-group dropleft">
         <span id="dropdownCartButton" data-toggle="dropdown" aria-haspopup`="true" aria-expanded="false">
           <i class="fas fa-cart-plus cart-btn mr-3 navs__mobile-cart"></i>
