@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name='keywords' content='Codec, E-learning,favourite courses' />
+  <meta name='keywords' content='Codac, E-learning,favourite courses' />
   <meta name='description' content='E-learning site, where registered students learn there favourite courses at their own pace' />
-  <meta property="og:title" content="Codec | E-learning,favourite courses" />
+  <meta property="og:title" content="Codac | E-learning,favourite courses" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="">
   <meta property="og:url" content="" />
@@ -16,7 +16,7 @@
   <meta name="twitter:site" content="">
   <meta name="twitter:creator" content="">
   <meta name="twitter:url" content="">
-  <meta name="twitter:title" content="Codec | E-learning,favourite courses">
+  <meta name="twitter:title" content="Codac | E-learning,favourite courses">
   <meta name="twitter:description" content="E-learning site, where registered students learn there favourite courses at their own pace">
   <meta name="twitter:image" content="">
 
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/tutor.css">
 
-  <title>Codec | TUTORS PAGE</title>
+  <title>Codac | TUTORS PAGE</title>
 
 </head>
 
@@ -228,7 +228,7 @@
             </div>
             <div class="col-lg-6">
               <div class="envision__body-image">
-                <img src="<?php echo base_url(); ?>assets/img/test.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/studentlearning.fw.png" alt="">
               </div>
             </div>
           </div>
@@ -256,7 +256,7 @@
             </div>
             <div class="col-lg-6">
               <div class="envision__body-image">
-                <img src="<?php echo base_url(); ?>assets/img/media.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/virtuallearning.fw.png" alt="">
               </div>
             </div>
           </div>
@@ -284,7 +284,7 @@
             </div>
             <div class="col-lg-6">
               <div class="envision__body-image">
-                <img src="<?php echo base_url(); ?>assets/img/community.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/happystudents.fw.png" alt="">
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@
       </div>
     </div>
   </section>
-  <!-- TESTIMONIAL SECTION -->
+  <!-- TESTIMONIAL SECTION
   <section class="testimonial" id="testimonial">
     <h2 class="testimonial__heading main2-heading text-center opacify">Expand your reach</h2>
     <hr class="bottom-line">
@@ -324,7 +324,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- HELP SECTION -->
   <section class="help text-center" id="help">
     <div class="help__bg text-light">
@@ -349,14 +349,14 @@
     </a>
   </section>
   <!-- FOOTER SECTION -->
-  <section class="bottom-footer" id="footer">
+  <!-- <section class="bottom-footer" id="footer">
     <footer class="footer">
       <hr>
       <div class="footer__links">
         <ul class="footer__links-1">
-          <li><a href="#"><strong>Codec for Business</strong></a></li>
-          <li><a href="#"><strong>Teach on Codec</strong></a></li>
-          <li><a href="#">Codec app</a></li>
+          <li><a href="#"><strong>Codac for Business</strong></a></li>
+          <li><a href="#"><strong>Teach on Codac</strong></a></li>
+          <li><a href="#">Codac app</a></li>
           <li><a href="#">About us</a></li>
         </ul>
         <ul class="footer__links-2">
@@ -377,7 +377,7 @@
       </div>
       <hr>
       <div class="companies opacify">
-        <p>Top companies choose Codec for Business to build in-demand career skills.</p>
+        <p>Top companies choose Codac for Business to build in-demand career skills.</p>
         <span class="mr-2">Lorem</span>
         <span class="mr-2">Lorem</span>
         <span class="mr-2">Lorem</span>
@@ -388,7 +388,7 @@
       <div class="copyright">
         <div class="copyright-1">
           <span class="logo"><a href="index.html"><img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt=""></a></span>
-          <span class="ml-3 opacify">Copyright &copy; 2020 Codec, Inc.</span>
+          <span class="ml-3 opacify">Copyright &copy; 2020 Codac, Inc.</span>
         </div>
         <ul class="copyright__links">
           <li class="mr-3"><a href="#">Terms</a></li>
@@ -396,8 +396,123 @@
         </ul>
       </div>
     </footer>
-  </section>
+  </section> -->
 
+ <!-- FOOTER SECTION -->
+  <section id="footer" class="footer w-100">
+    <a href="#home" class="text-light">
+      <span class="footer__go-up text-light">
+        <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
+      </span>
+    </a>
+    <footer class="footer section-padding">
+      <div class="navigation__container w-100">
+        <div class="footer__navigation">
+          <div class="container-fluid px-4">
+            <div class="nav-container">
+              <h6 class="footer__header one">ABOUT CODEC
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header three">LEARNING
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header two">MORE
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Faq</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Certificate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header four">CONNECT
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright text-light py-3">
+
+          <ul class="copyright__links">
+            <a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
+              <img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="Codac Logo">
+            </a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                &copy; Codac 2019
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Privacy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Terms
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Cookie Policy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Sitemap
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>

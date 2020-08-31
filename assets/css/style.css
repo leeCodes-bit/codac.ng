@@ -6,101 +6,6 @@
 }
 
 .hero__bg {
-<<<<<<< HEAD
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, #232021), to(#004fef));
-  background: linear-gradient(90deg, #232021 0, #004fef);
-  padding: 80px 1rem !important;
-  position: relative;
-}
-
-.hero__header {
-  font-size: 3.5rem;
-}
-
-.hero-text {
-  font-size: 1.1rem;
-}
-
-.hero__green {
-  color: #83c11f;
-}
-
-.hero .signup__btn {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.hero__courses {
-  display: -ms-grid;
-  display: grid;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero__courses-item {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 6px;
-  background: white;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
-}
-
-.hero__courses-item:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-.hero__courses-item .card {
-  height: 103px;
-  width: 110px;
-}
-
-.hero__courses-item .card-body {
-  padding: 0;
-  padding-top: 20px;
-}
-
-.hero__courses-item i {
-  display: inline-block;
-  font-size: 2.5rem;
-}
-.hero__courses img{
-  /* margin-top: -50px; */
-}
-.tech:hover {
-  border-top: 4px solid #004fef;
-}
-
-.lang:hover {
-  border-top: 4px solid green;
-}
-
-.sci:hover {
-  border-top: 4px solid purple;
-}
-
-.health:hover {
-  border-top: 4px solid red;
-}
-
-.bus:hover {
-  border-top: 4px solid orange;
-=======
 	position: relative;
 	background-image: linear-gradient(
 			to right,
@@ -116,7 +21,6 @@
 
 .hero__header {
 	font-size: 3.5rem;
->>>>>>> 8109cf12aa82697ad6afb3193a268268af21f8bb
 }
 
 .hero__body {
