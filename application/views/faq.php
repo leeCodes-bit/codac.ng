@@ -103,7 +103,7 @@
   </nav>
   <section class="container-fluid py-2 px-5 hero__header">
     <h1 class="main-header">FREQUENTLY ASK QUESTION</h1>
-    <h4 class="main-sub-header">How can I help?</h4>
+    <h4 class="main-sub-header">How can we help?</h4>
   </section>
   <section class="container-fluid hero__bg">
     <figure class="figure px-5">
@@ -111,7 +111,7 @@
         Welcome to Codac's Help Center; where all your most commonly asked questions are answered.
         Before contacting us, use the search (above) or browse through our categories (left) to try and find your answer.
       </figcaption>
-      <img src="<?php echo base_url(); ?>assets/img/faq-media/faq-people.png" class="figure-img" alt="hero-background">
+      <img src="<?php echo base_url(); ?>assets/img/faq-media/faq.jpg" class="figure-img" alt="hero-background">
     </figure>
   </section>
   <section class="container-fluid question px-5 py-2">
@@ -126,9 +126,9 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -143,9 +143,9 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -160,9 +160,9 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -177,9 +177,9 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -194,9 +194,9 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -211,12 +211,13 @@
           </div>
         </div>
         <div class="question-footer bg-success text-light px-4 mt-1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur mollitia quisquam cum culpa libero
             recusandae delectus totam, nam eum magni animi alias labore quis debitis unde necessitatibus sapiente laborum!
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
+    <!-- footer
     <footer class="footer-social mt-3">
       <a href="#">
         <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -270,8 +271,125 @@
         </li>
       </ul>
     </div>
-    </div>
+    </div> -->
   </section>
+
+<!-- FOOTER SECTION -->
+  <section id="footer" class="footer w-100">
+    <a href="#home" class="text-light">
+      <span class="footer__go-up text-light">
+        <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
+      </span>
+    </a>
+    <footer class="footer section-padding">
+      <div class="navigation__container w-100">
+        <div class="footer__navigation">
+          <div class="container-fluid px-4">
+            <div class="nav-container">
+              <h6 class="footer__header one">ABOUT CODAC
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header three">LEARNING
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header two">MORE
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Faq</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Certificate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header four">CONNECT
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright text-light py-3">
+
+          <ul class="copyright__links">
+            <a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
+              <img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="Codac Logo">
+            </a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                &copy; Codac 2019
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Privacy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Terms
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Cookie Policy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Sitemap
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

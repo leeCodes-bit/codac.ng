@@ -15,7 +15,7 @@ body {
 
 body .container #header {
 	padding: 5px 2%;
-	background-color: rgb(0, 80, 239);
+	background-color: #07286b;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -29,7 +29,7 @@ body .container #header {
 
 body .container #header h1 {
 	font-size: 20px;
-	color: #042c04;
+	color: #fff;
 }
 
 body .container #header i#menu {
@@ -83,7 +83,7 @@ body .container #header nav a img {
 }
 
 body .container #header nav a i {
-	color: black;
+	color: white;
 	font-size: 25px;
 }
 
@@ -96,7 +96,7 @@ body .container #header nav a #notification {
 	position: absolute;
 	top: 0px;
 	right: 3px;
-	background-color: white;
+	background-color: rgb(172, 169, 169);
 	border-radius: 50%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -137,7 +137,7 @@ body .container .wrapper .sidebar {
 	padding: 10px 5%;
 	height: 100vh;
 	width: 300px;
-	background-color: #3b580f;
+	background-color: #0d378a;
 	position: absolute;
 	left: -300px;
 	z-index: 1;
@@ -147,9 +147,9 @@ body .container .wrapper .sidebar {
 
 body .container .wrapper .sidebar .admin_info {
 	text-align: center;
-	border: 1px solid #87c925;
-	-webkit-box-shadow: 5px 5px 5px #87c925;
-	box-shadow: 5px 5px 5px #87c925;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 5px 5px 5px #ccc;
 	padding: 20px 0;
 	background-color: white;
 	border-radius: 5px;
@@ -161,7 +161,7 @@ body .container .wrapper .sidebar .admin_info img {
 }
 
 body .container .wrapper .sidebar .admin_info p {
-	color: #3b580f;
+	color: #0d378a;
 	font-weight: bold;
 }
 
@@ -197,7 +197,7 @@ body .container .wrapper .sidebar_menu ul li a i {
 
 body .container .wrapper .sidebar_menu ul li:hover,
 body .container .wrapper .sidebar_menu ul li.active {
-	border: 1px solid #87c925;
+	border: 1px solid #0d378a;
 }
 
 @media screen and (min-width: 780px) {
@@ -339,7 +339,7 @@ body .container .wrapper .main_board .cards_body:hover {
 .table h3 {
 	text-align: center;
 	padding: 10px 0;
-	color: #87c925;
+	color: #0d378a;
 }
 
 .table p.control {
@@ -356,7 +356,7 @@ body .container .wrapper .main_board .cards_body:hover {
 	background-color: #87c925;
 	font-size: 16px;
 	padding: 5px 20px;
-	border: 1px solid #87c925;
+	border: 1px solid #0d378a;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -364,13 +364,13 @@ body .container .wrapper .main_board .cards_body:hover {
 .table p.control button:hover,
 .table p.control button.active {
 	background-color: transparent;
-	color: #3b580f;
-	-webkit-box-shadow: 2px 2px 5px #87c925;
-	box-shadow: 2px 2px 5px #87c925;
+	color: #0d378a;
+	-webkit-box-shadow: 2px 2px 5px #ccc;
+	box-shadow: 2px 2px 5px #0d378a;
 }
 
 .table .table_container {
-	border: 1px solid green;
+	border: 2px solid #07286b;
 	overflow-x: scroll;
 	width: 320px;
 	margin: 0 auto;
@@ -384,7 +384,7 @@ body .container .wrapper .main_board .cards_body:hover {
 
 .table .table_container table#table tbody tr th,
 .table .table_container table#table tbody tr td {
-	border: 1px solid #3b580f;
+	border: 1px solid #0d378a;
 	padding: 3px 10px;
 }
 
@@ -473,16 +473,17 @@ body .container .wrapper .main_board .cards_body:hover {
 
 li:hover,
 .admins-menu {
-	border: 1px solid #87c925;
+	border: 1px solid #ccc;
 	padding-left: 20px;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	-webkit-box-shadow: 2px 2px 5px #87c925;
-	box-shadow: 2px 2px 5px #87c925;
+	-webkit-box-shadow: 2px 2px 5px #ccc;
+	box-shadow: 2px 2px 5px #ccc;
 }
 
 li:hover a,
 .admins-menu a {
-	color: #87c925 !important;
+	color: #ccc !important;
 }
+
 /*# sourceMappingURL=admins.css.map */
