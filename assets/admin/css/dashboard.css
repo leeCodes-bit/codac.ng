@@ -141,8 +141,8 @@ body .container .wrapper .sidebar {
 	position: absolute;
 	left: -300px;
 	z-index: 1;
-	-webkit-transition: all .5s;
-	transition: all .5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 body .container .wrapper .sidebar .admin_info {

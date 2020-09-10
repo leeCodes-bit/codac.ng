@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,234 +35,340 @@
 
 
 
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/info.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/nav.css">
 	<title>Codac | Course Info</title>
 </head>
+
 <body>
-<body id="home">
-	<!-- SPINNER -->
-	<div class="loader">
-		<div class="sk-cube-grid">
-			<div class="sk-cube sk-cube1"></div>
-			<div class="sk-cube sk-cube2"></div>
-			<div class="sk-cube sk-cube3"></div>
-			<div class="sk-cube sk-cube4"></div>
-			<div class="sk-cube sk-cube5"></div>
-			<div class="sk-cube sk-cube6"></div>
-			<div class="sk-cube sk-cube7"></div>
-			<div class="sk-cube sk-cube8"></div>
-			<div class="sk-cube sk-cube9"></div>
-		</div>
-	</div>
-	<!-- HEADER SECTION -->
-  <?php 
-    if ($this->input->cookie('userId', true) != '') {
-      include('fragments/std_online_header.php');
-    } else {
-      include('fragments/std_offline_header.php');
-    }
-  ?>
-		<div class="container">
-			<div class="banner">
-				<h1>The Complete Financial Analyst Course 2020</h1>
-				<p>Excel, Accounting, Financial Statement Analysis, Business Analysis, Financial Math, PowerPoint: Everything is Included!</p>
-				<button class="btn btn-primary">Bestseller</button>
-				<div class="ratings">
-				<span>4.5</span>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<span> 43,573 ratings 235,040 students</span>
+
+	<body id="home">
+		<!-- HEADER SECTION -->
+		<?php
+		if ($this->input->cookie('userId', true) != '') {
+			include('fragments/std_online_header.php');
+		} else {
+			include('fragments/std_offline_header.php');
+		}
+		?>
+		<section class="container-fluid bg-dark px-3 py-5">
+			<div class="hero">
+				<div class="row">
+					<div class="col-lg-8 col-md-7 col-sm-12 text-light">
+						<h1>The Complete Financial Analyst Course 2020</h1>
+						<p>Excel, Accounting, Financial Statement Analysis, Business Analysis, Financial Math, PowerPoint: Everything is Included!</p>
+						<button class="btn btn-lg btn-primary">Bestseller</button>
+						<div class="ratings mt-3">
+							<span>4.5</span>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<span> 43,573 ratings 235,040 students</span>
+						</div>
+						<div>
+							<i class="fa fa-cog" aria-hidden="true"><span> Last Updated 29/07/2020</span></i>
+							<span> <i class="fa fa-globe" aria-hidden="true"></i> English</span>
+						</div>
+						<div class="btn-group mt-3">
+							<a href="#" class="btn btn-outline-light btn-lg mr-3">
+								Wishlist
+								<span>
+									<i class="fa fa-heart-o" aria-hidden="true"></i>
+								</span>
+							</a>
+							<a href="#" class="btn btn-outline-light btn-lg">
+								Share
+								<span>
+									<i class="fa fa-share text-primary" aria-hidden="true"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-5 col-sm-12 mt-sm-4">
+						<div class="card border-primary">
+							<img class="card-img-top" src="holder.js/100px180/" alt="">
+							<div class="card-body">
+								<h4 class="card-price h2 mb-4">$342.66</h4>
+								<a href="#" class="card-button btn btn-danger btn-lg w-100 py-3">Add to cart</a>
+								<a href="#" class="card-button btn btn-outline-primary btn-lg w-100 mt-3 py-3">Buy now</a>
+							</div>
+							<div class="card-footer">
+								<h5 class="font-weight-bold">This course includes:</h5>
+								<div class="card-footer-text">
+									<p class="lead">Certificate of completion</p>
+									<p class="lead">Full lifetime access</p>
+									<p class="lead">80 hours on-demand video</p>
+									<p class="lead">1 downloadable resource</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div>
-				<i class="fa fa-cog" aria-hidden="true"><span> 	Last Updated 29/07/2020</span></i>
-				<span> <i class="fa fa-globe" aria-hidden="true"></i> English</span>
-				<span><a href="">More</a></span>
-				</div>
-				<div class="btn">
-					<button class="btn">Wishlist <span><i class="fa fa-heart" aria-hidden="true"></i></span></button>
-					<button class="btn">Share <span><i class="fa fa-share" aria-hidden="true"></i></span></button>
-					<button class="btn">Gift Course</button>
+			</div>
+		</section>
+		<!-- Section one -->
+		<div class="container mx-auto benefits mt-3 col-lg-9 col-md-10 col-sm-11">
+			<div class="jumbotron">
+				<h3>What you stand to learn</h3>
+				<div class="benefits--outline mt-3">
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
+					<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
 				</div>
 			</div>
 
-			<!-- Section one -->
-			<div class="section-one course-benefits">
-				<h3>What you stand to learn</h3>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<p><i class="fa fa-check" aria-hidden="true"></i><span> Work comfortably with Microsoft Excel</span></p>
-				<a class="btn-primary">Show more <span> <i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+			<div class="content mt-3">
+				<h3>Course content</h3>
+				<div id="accordion" class="mt-3 accordion">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<button class="btn font-weight-bold" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Course Introduction
+								</button>
+							</h5>
+						</div>
+
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body">
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingTwo">
+							<h5 class="mb-0">
+								<button class="btn font-weight-bold collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Software Tools Setup
+								</button>
+							</h5>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+							<div class="card-body">
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingThree">
+							<h5 class="mb-0">
+								<button class="btn font-weight-bold collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									First Steps
+								</button>
+							</h5>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+							<div class="card-body">
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="section-two">
+
+			<div class="requirement mt-3">
 				<h3>Requirements</h3>
-				<ul>
+				<ul class="mx-0 px-4">
 					<li>Absolutely no experience is required. We will start from the basics and gradually build up your knowledge. Everything is in the course.</li>
 					<li>You will need Microsoft Excel 2010, 2013, 2016, or 2020</li>
 					<li>You will need Microsoft Excel 2010, 2013, 2016, or 2020</li>
 				</ul>
 			</div>
-			<div class="course-content">
-				
-			</div>
-		</div>
-<!-- FOOTER SECTION -->
-<section id="footer" class="footer w-100">
-		<a href="#home" class="text-light">
-			<span class="footer__go-up text-light">
-				<i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
-			</span>
-		</a>
-		<footer class="footer section-padding">
-			<div class="navigation__container w-100">
-				<div class="footer__navigation">
-					<!-- <img src="<?php echo base_url(); ?>assets/img/footer-triangles.png" alt="footer bg" class="footer__bg"> -->
-					<div class="container">
-						<div class="nav-container">
-							<h6 class="footer__header one">ABOUT CODEC
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum lolo</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-							</ul>
-						</div>
-						<div class="nav-container">
-							<h6 class="footer__header three">LEARNING
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
 
-							</ul>
+			<div class="review py-3">
+				<h3>Reviews</h3>
+				<div class="review--form">
+					<form action="" method="post" class="d-flex align-items-center">
+						<input type="search" name="searchReview" id="searchReview" class="form-control form-control-lg" placeholder="Search reviews">
+						<button type="submit" class="btn btn-md btn-primary">Search</button>
+					</form>
+				</div>
+				<div class="review--comments mt-3">
+					<div class="review--comments-user">
+						<div class="avatar">
+							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
 						</div>
-						<div class="nav-container">
-							<h6 class="footer__header two">MORE
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-							</ul>
+						<div class="review--comments-body">
+							<h5 class="my-0 py-0">Donnie Yen</h5>
+							<p class="data-posted my-0 py-0">3 weeks ago</p>
+							<p class="comment">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quisquam exercitationem similique culpa sunt dolorem tenetur non numquam iste voluptatum?
+							</p>
 						</div>
-						<div class="nav-container">
-							<h6 class="footer__header four">CONNECT
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
-									</a>
-								</li>
-								<!-- <li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
-									</a>
-								</li> -->
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2">Customer Support</span>
-									</a>
-								</li>
-							</ul>
+					</div>
+					<div class="review--comments-user">
+						<div class="avatar">
+							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+						</div>
+						<div class="review--comments-body">
+							<h5 class="my-0 py-0">Park Shin Hye</h5>
+							<p class="data-posted my-0 py-0">1 week ago</p>
+							<p class="comment">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptatum?
+							</p>
+						</div>
+					</div>
+					<div class="review--comments-user">
+						<div class="avatar">
+							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+						</div>
+						<div class="review--comments-body">
+							<h5 class="my-0 py-0">John Doe</h5>
+							<p class="data-posted my-0 py-0">1 week ago</p>
+							<p class="comment">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, voluptatum?
+							</p>
 						</div>
 					</div>
 				</div>
-				<div class="footer__copyright text-light py-3">
-
-					<ul class="copyright__links">
-						<h5 class="title">CODAC</h5>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								&copy; Codac 2019
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Privacy
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Terms
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Cookie Policy
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Sitemap
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div>
-		</footer>
-	</section>
+		</div>
 
 
-	<?php include 'fragments/modals.php'; ?>
 
-	<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url(); ?>assets/js/slick.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-	<script src=" https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
 
-	<script src="<?php echo base_url(); ?>assets/js/plugin.js"></script>
-	</script>
-</body>
+
+		<!-- FOOTER SECTION -->
+		<section id="footer" class="footer w-100">
+			<a href="#home" class="text-light">
+				<span class="footer__go-up text-light">
+					<i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
+				</span>
+			</a>
+			<footer class="footer section-padding">
+				<div class="navigation__container w-100">
+					<div class="footer__navigation">
+						<div class="container-fluid px-4">
+							<div class="nav-container">
+								<h6 class="footer__header one">ABOUT CODEC
+									<hr>
+								</h6>
+								<ul class="footer__links">
+									<li class="nav-item">
+										<a href="#" class="nav-link">Home</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">About</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-container">
+								<h6 class="footer__header three">LEARNING
+									<hr>
+								</h6>
+								<ul class="footer__links">
+									<li class="nav-item">
+										<a href="#" class="nav-link">News</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">Blog</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-container">
+								<h6 class="footer__header two">MORE
+									<hr>
+								</h6>
+								<ul class="footer__links">
+									<li class="nav-item">
+										<a href="#" class="nav-link">Faq</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">Certificate</a>
+									</li>
+								</ul>
+							</div>
+							<div class="nav-container">
+								<h6 class="footer__header four">CONNECT
+									<hr>
+								</h6>
+								<ul class="footer__links">
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copyright text-light py-3">
+
+						<ul class="copyright__links">
+							<a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
+								<img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="Codac Logo">
+							</a>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									&copy; Codac 2019
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									Privacy
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									Terms
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									Cookie Policy
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									Sitemap
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</section>
+
+		<?php include 'fragments/modals.php'; ?>
+
+		<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="<?php echo base_url(); ?>assets/js/slick.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src=" https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+
+		<script src="<?php echo base_url(); ?>assets/js/plugin.js"></script>
+		</script>
+	</body>
 
 </html>

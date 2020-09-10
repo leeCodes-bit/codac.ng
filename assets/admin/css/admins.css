@@ -141,8 +141,8 @@ body .container .wrapper .sidebar {
 	position: absolute;
 	left: -300px;
 	z-index: 1;
-	-webkit-transition: all .5s;
-	transition: all .5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 body .container .wrapper .sidebar .admin_info {
@@ -406,15 +406,39 @@ body .container .wrapper .main_board .cards_body:hover {
 	border-radius: 5px;
 }
 
-.table .table_container table#table tbody tr th:nth-of-type(5) button:nth-child(2),
-.table .table_container table#table tbody tr td:nth-of-type(5) button:nth-child(2) {
+.table
+	.table_container
+	table#table
+	tbody
+	tr
+	th:nth-of-type(5)
+	button:nth-child(2),
+.table
+	.table_container
+	table#table
+	tbody
+	tr
+	td:nth-of-type(5)
+	button:nth-child(2) {
 	background-color: orange;
 	color: black;
 	border-color: orange;
 }
 
-.table .table_container table#table tbody tr th:nth-of-type(5) button:nth-child(3),
-.table .table_container table#table tbody tr td:nth-of-type(5) button:nth-child(3) {
+.table
+	.table_container
+	table#table
+	tbody
+	tr
+	th:nth-of-type(5)
+	button:nth-child(3),
+.table
+	.table_container
+	table#table
+	tbody
+	tr
+	td:nth-of-type(5)
+	button:nth-child(3) {
 	background-color: red;
 	color: white;
 	border-color: red;
