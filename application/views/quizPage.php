@@ -23,7 +23,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/nav.css">
-  <title>Codac | Student Dashboard</title>
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/studentdashboard.css">
+  <title>Codac | Student Quiz</title>
 </head>
 
 <body>
@@ -52,10 +53,6 @@
           </div>
         </li>
       </ul>
-      <form class="form-inline my-3 ml-lg-3 my-lg-0" id="searchcourse">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
       <div class="auth ml-auto mr-5 d-flex flex-row align-items-center">
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" id="userdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,9 +100,10 @@
     </div>
   </nav>
 
-  <div class="quiz-page container mx-auto py-5">
+  <!-- QUIZ SECTION -->
+  <div class="quiz-page container mx-auto py-5 px-5">
     <div class="row">
-      <div class="col-lg-6 mx-auto">
+      <div class="col-lg-6 col-md-10 col-sm-12 mx-auto">
         <ul class="listgroup mx-0 px-0">
           <li class="list-group-item font-weight-bold">
             Total Question:
@@ -165,7 +163,141 @@
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- FOOTER SECTION -->
+  <section id="footer" class="footer w-100">
+    <footer class="footer section-padding">
+      <div class="navigation__container w-100">
+        <div class="footer__navigation">
+          <div class="container">
+            <div class="nav-container">
+              <h6 class="footer__header one">ABOUT CODAC
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum lolo</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header three">LEARNING
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum </a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header two">MORE
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Lorem ipsum</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-container">
+              <h6 class="footer__header four">CONNECT
+                <hr>
+              </h6>
+              <ul class="footer__links">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2">Customer Support</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright text-light py-3">
+
+          <ul class="copyright__links">
+            <h5 class="title">CODAC</h5>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                &copy; CODAC 2019
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Privacy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Terms
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Cookie Policy
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Sitemap
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/nav.js"></script>
