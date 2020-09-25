@@ -69,6 +69,16 @@ function showPage(e) {
     commsBorder.classList.add('active-list');
   }
 
+  if (target.classList.contains('show-quiz')) {
+
+    let quiz = document.querySelector('.quiz');
+    let quizBorder = document.querySelector('.quizBorder');
+
+    //add classes to element
+    quiz.classList.add('show');
+    quizBorder.classList.add('active-list');
+  }
+
   if (target.classList.contains('show-tools')) {
     //get dom elements
     let tools = document.querySelector('.tools');

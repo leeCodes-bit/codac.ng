@@ -146,6 +146,11 @@
                 <i class="fas fa-comment-dots show-comms"></i>
                 Communication
               </a></li>
+            <li class="list-item show-quiz quizBorder">
+              <a href="#" class="show-quiz">
+                <i class="fas fa-book open show-quiz"></i>
+                Quiz
+              </a></li>
             <li class="list-item show-perf showBorder">
               <a href="#" class="show-perf">
                 <i class="fas fa-chart-bar show-perf"></i>
@@ -385,6 +390,52 @@
       </div>
     </main>
 
+    <!-- Quiz -->
+    <main class="quiz hide">
+      <div class="quiz__dashboard">
+        <div class="rows">
+          <h2 class="mb-5 text-left pl-4">Set Quiz</h2>
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <form action="" method="post" id="setQuiz">
+              <div class="form-group">
+                <label for="quiz-title">Title</label>
+                <input type="text" name="quiz-title" id="quiz-title" class="form-control form-control-lg" placeholder="Quiz Title" required>
+                <span class="text-danger d-block small mt-2 font-weight-bold" id="title-error"></span>
+              </div>
+              <div class="form-group d-none" id="questionType">
+                <label for="question-type">Choose a Question Type</label>
+                <select class="form-control" name="question-type" id="type" required>
+                  <option value="none">--</option>
+                  <option value="Multiple Choice">Multiple Choice</option>
+                  <option value="Objective">Objective</option>
+                </select>
+                <span class="text-danger d-block small mt-2 font-weight-bold " id="type-error"></span>
+              </div>
+              <div class="form-group d-none" id="question">
+                <div class="form-group">
+                  <label for="question">Question</label>
+                  <input type="text" name="quiz-question" id="quiz-question" class="form-control form-control-lg" placeholder="Enter Question" required>
+                  <span class="text-danger d-block small mt-2 font-weight-bold " id="question-error"></span>
+                </div>
+              </div>
+              <div class="form-group d-none" id="submitButton">
+                <button type="submit" class="btn btn-md btn-success">
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div id="buttons-container">
+              <button class="btn btn-md py-2 px-3 btn-danger" id="add-question">Add a Question</button>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-md d-none py-2 px-3 btn-primary" id="add-answer">Add Answer</button>
+                <button class="btn btn-md d-none py-2 px-3 btn-success" id="done">Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!-- PERFORMANCE PAGE -->
     <main class="performance hide">
       <div class="performance__dashboard">
@@ -535,6 +586,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/dashboard.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/quiz.js"></script>
 </body>
 
 </html>
