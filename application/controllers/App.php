@@ -809,6 +809,7 @@ class App extends CI_Controller
 
 
 
+
 	function body($fullname, $activationLink)
 	// function body()
 	{

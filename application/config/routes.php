@@ -67,6 +67,11 @@ $route['logout'] = 'app/logout';
 
 $route['createCourseAction'] = 'app/createCourseAction';
 
+// some pages
+$route['blog'] = 'app/blog';
+$route['news'] = 'app/newspress';
+$route['faq'] = 'app/faq';
+
 
 
 
