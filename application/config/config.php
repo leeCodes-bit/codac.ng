@@ -26,7 +26,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $config['base_url'] = 'http://localhost/codac.ng/';
 // $config['base_url'] = 'https://codactest.herokuapp.com/';
 // $config['base_url'] = 'http://codac.pulaakutrade.com/';
-$config['base_url'] = 'http://localhost/codac.ng/';
 
 /*
 |--------------------------------------------------------------------------
