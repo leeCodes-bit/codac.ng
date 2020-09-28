@@ -3,6 +3,12 @@
 	font-size: 18px;
 }
 
+.hero .card img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain;
+}
+
 .benefits--outline {
 	display: flex;
 	flex-wrap: wrap;
@@ -42,6 +48,17 @@
 .review--comments-user .avatar {
 	width: 70px;
 	text-align: center;
+	margin-right: 10px;
+}
+
+.review--comments-body {
+	width: calc(100% - 85px);
+}
+
+.review--comments-user .avatar img {
+	width: 100%;
+	height: 80px;
+	object-fit: contain;
 }
 
 .footer {

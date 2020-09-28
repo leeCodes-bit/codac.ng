@@ -54,7 +54,7 @@
 		<section class="container-fluid bg-dark px-3 py-5">
 			<div class="hero">
 				<div class="row">
-					<div class="col-lg-8 col-md-7 col-sm-12 text-light">
+					<div class="col-lg-8 col-md-7 col-sm-12 text-light mb-4">
 						<h1>The Complete Financial Analyst Course 2020</h1>
 						<p>Excel, Accounting, Financial Statement Analysis, Business Analysis, Financial Math, PowerPoint: Everything is Included!</p>
 						<button class="btn btn-lg btn-primary">Bestseller</button>
@@ -87,7 +87,7 @@
 					</div>
 					<div class="col-lg-4 col-md-5 col-sm-12 mt-sm-4">
 						<div class="card border-primary">
-							<img class="card-img-top" src="holder.js/100px180/" alt="">
+							<img src="<?php echo base_url(); ?>assets/img/digitalclass.fw.png" alt="Course Illustration">
 							<div class="card-body">
 								<h4 class="card-price h2 mb-4">$342.66</h4>
 								<a href="#" class="card-button btn btn-danger btn-lg w-100 py-3">Add to cart</a>
@@ -200,7 +200,7 @@
 				<div class="review--comments mt-3">
 					<div class="review--comments-user">
 						<div class="avatar">
-							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+							<img src="<?php echo base_url(); ?>assets/img/user.jpg" alt="user">
 						</div>
 						<div class="review--comments-body">
 							<h5 class="my-0 py-0">Donnie Yen</h5>
@@ -212,7 +212,7 @@
 					</div>
 					<div class="review--comments-user">
 						<div class="avatar">
-							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+							<img src="<?php echo base_url(); ?>assets/img/user.jpg" alt="user">
 						</div>
 						<div class="review--comments-body">
 							<h5 class="my-0 py-0">Park Shin Hye</h5>
@@ -224,7 +224,7 @@
 					</div>
 					<div class="review--comments-user">
 						<div class="avatar">
-							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+							<img src="<?php echo base_url(); ?>assets/img/user.jpg" alt="user">
 						</div>
 						<div class="review--comments-body">
 							<h5 class="my-0 py-0">John Doe</h5>
@@ -237,10 +237,6 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
 
 		<!-- FOOTER SECTION -->
 		<section id="footer" class="footer w-100">
