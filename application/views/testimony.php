@@ -24,10 +24,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/nav.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/testimony.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/footer.css">
   <title>Codac | TESTIMONY </title>
 </head>
 
-<body>
+<body id="home">
   <!-- NAVIGATION SECTION -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
@@ -285,49 +286,17 @@
       </li>
     </ul>
   </section>
+
   <!-- FOOTER SECTION -->
-  <section class="footer">
-    <div class="nav-container">
-      <h6 class="footer__header">ABOUT CODAC
-      </h6>
-      <ul class="footer__links">
-        <li class="nav-item">
-          <a href="#" class="nav-link">Our Story</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Blog</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-container">
-      <h6 class="footer__header">LEARNING </h6>
-      <ul class="footer__links">
-        <li class="nav-item">
-          <a href="#" class="nav-link">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Testimonials</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Refer a Friend</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-container">
-      <h6 class="footer__header">MORE</h6>
-      <ul class="footer__links">
-        <li class="nav-item">
-          <a href="#" class="nav-link">News & Press</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Index</a>
-        </li>
-      </ul>
-    </div>
+  <section id="footer" class="footer w-100">
+    <a href="#home" class="text-light">
+      <span class="footer__go-up text-light">
+        <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
+      </span>
+    </a>
+    <?php include('fragments/footer.php'); ?>
   </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

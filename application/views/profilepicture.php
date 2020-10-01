@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/nav.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/studentdashboard.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/footer.css">
 	<title>Codac | Profile Picture</title>
 
 	<script>
@@ -43,7 +44,7 @@
 
 </head>
 
-<body>
+<body id="home">
 	<!-- HEADER SECTION -->
 	<nav class="navbar navbar-expand-lg navbar-dark">
 		<a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
@@ -249,7 +250,6 @@
 
 	</section>
 
-
 	<!-- FOOTER SECTION -->
 	<section id="footer" class="footer w-100">
 		<a href="#home" class="text-light">
@@ -257,136 +257,7 @@
 				<i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
 			</span>
 		</a>
-		<footer class="footer section-padding">
-			<div class="navigation__container w-100">
-				<div class="footer__navigation">
-					<img src="<?php echo base_url(); ?>assets/img/footer-triangles.png" alt="footer bg" class="footer__bg">
-					<div class="container">
-						<div class="nav-container">
-							<h6 class="footer__header one">ABOUT CODAC
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum lolo</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-							</ul>
-						</div>
-						<div class="nav-container">
-							<h6 class="footer__header three">LEARNING
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum </a>
-								</li>
-
-							</ul>
-						</div>
-						<div class="nav-container">
-							<h6 class="footer__header two">MORE
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Lorem ipsum</a>
-								</li>
-							</ul>
-						</div>
-						<div class="nav-container">
-							<h6 class="footer__header four">CONNECT
-								<hr>
-							</h6>
-							<ul class="footer__links">
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">
-										<i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2">Customer Support</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer__copyright text-light py-3">
-
-					<ul class="copyright__links">
-						<h5 class="title">CODAC</h5>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								&copy; CODAC 2019
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Privacy
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Terms
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Cookie Policy
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Sitemap
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</footer>
+		<?php include('fragments/footer.php'); ?>
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

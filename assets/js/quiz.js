@@ -14,14 +14,14 @@ Quiz.prototype.showErrorMessage = function (element, errorElement) {
   if (errorSpan.id !== 'type-error') {
     if (!element.value.trim().length) {
       this.error = 'error';
-      errorSpan.textContent = 'Field should not be empty';
+      errorSpan.textContent = 'This field is required';
     }
   }
 
   if (errorSpan.id === 'type-error') {
     if (element.value === 'none') {
       this.error = 'error';
-      errorSpan.textContent = 'Field should not be empty';
+      errorSpan.textContent = 'This field is required';
     }
   }
 

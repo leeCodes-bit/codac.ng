@@ -562,24 +562,6 @@
       <li class="mr-3"><a href="#">Terms</a></li>
       <li><a href="#">Privacy Policy and Cookie Policy</a></li>
     </ul>
-
-    <div class="lang dropup opacify">
-      <i class="fas fa-globe" id="dropdownlanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-      <span aria-hidden="true" id="dropdownlanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>English</strong></span>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-
-      <div class="dropdown-menu" aria-labelledby="dropdownlanguage">
-        <li class="list-group-item">
-          <a href="#">French</a>
-        </li>
-        <li class="list-group-item">
-          <a href="#">Deutsch</a>
-        </li>
-        <li class="list-group-item">
-          <a href="#">Italiano</a>
-        </li>
-      </div>
-    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
