@@ -51,6 +51,11 @@
 
       <ul class="mobile__sidebar-list list-group">
 
+        <li class="list-item show-profile list-group-item">
+          <a href="#" class="show-profile">
+            Profile
+          </a></li>
+
         <li class="list-item show-courses list-group-item">
           <a href="#" class="show-courses">
             Courses
@@ -135,7 +140,13 @@
               <a href="#"> <img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="codac logo">
               </a></li>
 
-            <li class="list-item show-courses active-list courseBorder">
+            <li class="list-item show-profile profileBorder active-list">
+              <a href="#" class="show-profile">
+                <i class="fas fa-user show-profile"></i>
+                Profile
+              </a></li>
+
+            <li class="list-item show-courses courseBorder">
               <a href="#" class="show-courses">
                 <i class="fas fa-play show-courses"></i>
                 Courses
@@ -180,8 +191,67 @@
       </div>
     </section>
 
+
+    <!-- PROFILE PAGE -->
+    <main class="profile hide show">
+
+      <div class="profile__dashboard">
+        <h1 class="display-4">Profile</h1>
+        <form action="#" method="post">
+          <div class="form-group form-bg">
+            <label for="about">Personal Profile</label>
+            <textarea style="resize: none;text-align: initial;" placeholder="Tell us a bit about yourself...." name="summary" class="about-info" id="about"></textarea>
+          </div>
+
+          <div class="form-details form-bg">
+            <div class="form-details-container">
+              <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" class="form-control form-control-md" placeholder="First Name">
+              </div>
+
+              <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" class="form-control form-control-md" placeholder="Last Name">
+              </div>
+
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" class="form-control form-control-md" placeholder="Country">
+              </div>
+
+              <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" name="nationality" id="nationality" class="form-control form-control-md" placeholder="Nationality">
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of birth</label>
+                <input type="text" name="dob" id="dob" class="form-control form-control-md" placeholder="eg: 11/01/2020">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control form-control-md" placeholder="Email">
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="custom-select" name="gender" id="gender">
+                  <option selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+
+              </div>
+            </div>
+        </form>
+      </div>
+    </main>
+
+
     <!-- COURSES PAGE -->
-    <main class="courses hide show">
+    <main class="courses hide">
 
       <!-- CREATE COURSE -->
       <!-- check if teacher acccount is approved -->
