@@ -71,6 +71,7 @@ $route['createCourseAction'] = 'app/createCourseAction';
 $route['blog'] = 'app/blog';
 $route['news'] = 'app/newspress';
 $route['faq'] = 'app/faq';
+$route['quiz'] = 'app/quiz';
 
 
 

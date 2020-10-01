@@ -806,7 +806,9 @@ class App extends CI_Controller
 		$this->load->view('testimony');
 	}
 
-
+		public function quiz() {
+		$this->load->view('quiz');
+	}
 
 
 
