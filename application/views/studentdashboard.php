@@ -111,8 +111,8 @@
 		<!-- DASHBOARD WIDGET -->
 		<div class="widget">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="dashboard__widget-card col-md-4">
+				<div class="col-md-12 widget__grid">
+					<div class="dashboard__widget-card">
 						<div class="dashboard__widget-card-header">
 							<h5>Courses in Progress</h5>
 						</div>
@@ -123,7 +123,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="dashboard__widget-card col-md-4">
+					<div class="dashboard__widget-card">
 						<div class="dashboard__widget-card-header">
 							<h5>Completed Courses</h5>
 						</div>
@@ -134,7 +134,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="dashboard__widget-card col-md-4">
+					<div class="dashboard__widget-card">
 						<div class="dashboard__widget-card-header">
 							<h5>My Certificates</h5>
 						</div>
@@ -145,7 +145,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="dashboard__widget-card col-md-4">
+					<div class="dashboard__widget-card">
 						<div class="dashboard__widget-card-header">
 							<h5>Goals and Achievement</h5>
 						</div>
@@ -156,7 +156,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="dashboard__widget-card col-md-4">
+					<div class="dashboard__widget-card">
 						<div class="dashboard__widget-card-header">
 							<h5>Study Hours</h5>
 						</div>

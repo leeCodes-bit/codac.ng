@@ -28,6 +28,13 @@
 	margin-left: 266px;
 }
 
+.widget__grid {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+	gap: 40px;
+}
+
 .dashboard {
 	position: relative;
 	height: 100%;
@@ -122,6 +129,7 @@
 	box-shadow: 0 2px 5px 0 rgba(50, 50, 50, 0.2);
 	transition: opacity 0.3s ease-in;
 	display: inline-block;
+	height: 300px;
 }
 .dashboard__widget-card-header {
 	text-align: center;
