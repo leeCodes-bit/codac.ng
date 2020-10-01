@@ -78,3 +78,9 @@ aside .form-group {
 		margin-left: 0;
 	}
 }
+
+@media (max-width: 400px) {
+	.courses--grid-item img {
+		width: 100%;
+	}
+}
