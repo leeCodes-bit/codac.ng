@@ -24,8 +24,9 @@
 
                         <h3>Tutors Information</h3>
                         <p class="control">
-                            <button class="active" id="active">Active Tutors</button>
-                            <button id="deactivated">Deactivated Tutors</button>
+                            <a href="<?php echo base_url(); ?>admin/tutors/all"><button class="active" id="active">All Tutors</button></a>
+                            <a href="<?php echo base_url(); ?>admin/tutors/active"><button class="active" id="active">Active Tutors</button></a>
+                            <a href="<?php echo base_url(); ?>admin/tutors/inactive"><button id="deactivated">Deactivated Tutors</button></a>
                         </p>
                         <div class="table_container">
                             <table id="table">
@@ -40,7 +41,23 @@
                                 </tbody>
                                 <tbody>
                                   <?php
-                                    $query = $this->db->get_where('users', array("role" => "teacher"));
+
+                                    if(isset($mode)) {
+                                    if($mode == 'all') {
+                                         $query = $this->db->get_where('users', array("role" => "teacher"));
+                                    } else if ($mode == 'active') {
+                                         $query = $this->db->get_where('users', array("role" => "teacher", "status" => 1));
+                                    } else if ($mode == 'inactive') {
+                                         $query = $this->db->get_where('users', array("role" => "teacher", "status" => 0));
+                                    } else {
+                                         $query = $this->db->get_where('users', array("role" => "teacher"));
+                                    }
+                                  } else {
+                                     $query = $this->db->get_where('users', array("role" => "teacher"));
+                                  }
+
+
+                                   
                                     if($this->db->affected_rows() > 0) {
                                       // admins found
                                       $sn = 1;

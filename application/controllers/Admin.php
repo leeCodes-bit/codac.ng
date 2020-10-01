@@ -150,16 +150,42 @@ class Admin extends CI_Controller
 		$this->load->view('admin/courses');
 	}
 
-	public function students()
+	public function students($mode='all')
 	{
 		$this->auth();
-		$this->load->view('admin/students');
+		$data = array(
+			'mode' => $mode
+		);
+		$this->load->view('admin/students', $data);
 	}
 
-	public function tutors()
+	public function activateStudent($studentId){
+		$data = array(
+			'student_status' => 1
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $studentId);
+		$res = $this->db->update('users');
+		redirect(base_url().'admin/students?activated');
+	}
+
+	public function deactivateStudent($studentId) {
+		$data = array(
+			'student_status' => 0
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $studentId);
+		$res = $this->db->update('users');
+		redirect(base_url().'admin/students?deactivated');
+	}
+
+	public function tutors($mode='all')
 	{
 		$this->auth();
-		$this->load->view('admin/tutors');
+		$data = array(
+			'mode' => $mode
+		);
+		$this->load->view('admin/tutors', $data);
 	}
 
 	public function viewTutor($id) {
