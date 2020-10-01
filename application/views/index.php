@@ -55,6 +55,19 @@
       <div class="sk-cube sk-cube9"></div>
     </div>
   </div>
+
+  <div class="video d-none video-close">
+    <div class="video__container video-close">
+      <span class="video-close">
+        <i class="fa fa-times video-close" aria-hidden="true"></i>
+      </span>
+      <video autoplay controls muted>
+        <source src="<?php echo base_url(); ?>assets/video/black_student.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
   <!-- HEADER SECTION -->
   <?php
   if ($this->input->cookie('userId', true) != '') {
@@ -63,6 +76,8 @@
     include('fragments/std_offline_header.php');
   }
   ?>
+
+
 
 
   <!--HERO BACKGROUD SECTION-->
@@ -267,6 +282,7 @@
   <script src="<?php echo base_url(); ?>assets/js/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script src=" https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/video.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/plugin.js"></script>
   </script>
 </body>
