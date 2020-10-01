@@ -28,6 +28,18 @@
                             <a href="<?php echo base_url(); ?>admin/tutors/active"><button class="active" id="active">Active Tutors</button></a>
                             <a href="<?php echo base_url(); ?>admin/tutors/inactive"><button id="deactivated">Deactivated Tutors</button></a>
                         </p>
+                        <div>
+                            <?php 
+                                if(isset($_GET["activated"])) {
+                                    echo '<h4 style="color:green; text-align: center;">Tutor Activated Successfully</h4>';
+                                }
+
+                                if(isset($_GET["deactivated"])) {
+                                    echo '<h4 style="color:green; text-align: center;">Tutor Deactivated Successfully</h4>';
+                                }
+                            ?>
+                        </div>
+
                         <div class="table_container">
                             <table id="table">
                                 <tbody>
@@ -35,7 +47,8 @@
                                         <th>S/N</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Status</th>
+                                        <th>Application Status</th>
+                                        <th>System Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </tbody>
@@ -72,10 +85,30 @@
                                               else if($user->tutor_approved == 1) echo 'Pending';
                                               else if($user->tutor_approved == 2) echo 'Approved';
                                             echo '</td>
+
+                                            <td>';
+                                                if($user->status == 1) {
+                                                    echo '<span style="color:green;">Active</span>';
+                                                } else if($user->status == 0) {
+                                                    echo '<span style="color:red;">Inactive</span>';
+                                                }
+                                            echo '</td>
+
                                             <td>
-                                              <span><a href="'.base_url().'view-tutor/'.$user->user_id.'">View</a></span> |
-                                              <span><a href="#">Deactivate</a></span> |
-                                              <span><a href="#">Approve</a></span>
+                                              <span><a href="'.base_url().'view-tutor/'.$user->user_id.'">View</a></span> |';
+                                              if($user->status == 1) {
+                                                echo '<span><a href="'.base_url().'admin/deactivateTutor/'.$user->user_id.'">Deactivate</a></span> |';
+                                              } else if($user->status == 0) {
+                                                echo '<span><a href="'.base_url().'admin/activateTutor/'.$user->user_id.'">Activate</a></span> |';
+                                              } 
+
+                                              if($user->tutor_approved == 1) {
+                                                echo '<span><a href="'.base_url().'approve-tutor-application/'.$user->user_id.'">Approve</a></span>';
+                                              } else {
+                                                echo '<span><a href="'.base_url().'admin/declineTutorApplication/'.$user->user_id.'">Decline</a></span>';
+                                              }
+                                              echo '                                            
+                                              
                                             </td>
                                         </tr>';
                                         $sn++;

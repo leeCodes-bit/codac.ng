@@ -161,7 +161,7 @@ class Admin extends CI_Controller
 
 	public function activateStudent($studentId){
 		$data = array(
-			'student_status' => 1
+			'status' => 1
 		);
 		$this->db->set($data);
 		$this->db->where('user_id', $studentId);
@@ -171,7 +171,7 @@ class Admin extends CI_Controller
 
 	public function deactivateStudent($studentId) {
 		$data = array(
-			'student_status' => 0
+			'status' => 0
 		);
 		$this->db->set($data);
 		$this->db->where('user_id', $studentId);
@@ -186,6 +186,26 @@ class Admin extends CI_Controller
 			'mode' => $mode
 		);
 		$this->load->view('admin/tutors', $data);
+	}
+
+	public function activateTutor($tutorId){
+		$data = array(
+			'status' => 1
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $tutorId);
+		$res = $this->db->update('users');
+		redirect(base_url().'admin/tutors?activated');
+	}
+
+	public function deactivateTutor($tutorId) {
+		$data = array(
+			'status' => 0
+		);
+		$this->db->set($data);
+		$this->db->where('user_id', $tutorId);
+		$res = $this->db->update('users');
+		redirect(base_url().'admin/tutors?deactivated');
 	}
 
 	public function viewTutor($id) {
