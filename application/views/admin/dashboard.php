@@ -25,29 +25,46 @@
                             <!-- <p>Last Login: Monday, 10th February, 2020 -10:20PM</p> -->
                         </div>
                     </section>
-                    <!-- <section class="cards">
-                        <div class="cards_body">
-                            <a href="students.php"><i class="fa fa-user-graduate"></i></a>
-                            <span>70</span>
-                            <p>Registered Students</p>
-                        </div>
-                        <div class="cards_body">
-                            <a href="tutors.php"><i class="fas fa-chalkboard-teacher"></i></a>
-                            <span>7</span>
-                            <p>Registered Tutors</p>
-                        </div>
-                        <div class="cards_body">
-                            <a href="courses.php"><i class="fab fa-discourse"></i></a>
-                            <span>16</span>
-                            <p>Available Courses</p>
-                        </div>
-                        <div class="cards_body">
-                            <a href="admins.php"><i class="fas fa-users-cog"></i></a>
-                            <span>3</span>
-                            <p>Registered Admins</p>
-                        </div>
+
+                    <?php
+                        // count students
+                        $query = $this->db->get_where('users', array('role' => 'student'));
+                        $studentCount = $this->db->affected_rows();
+
+                        // count tutors
+                        $query = $this->db->get_where('users', array('role' => 'teacher'));
+                        $tutorCount = $this->db->affected_rows();
+
+                        // count admins
+                        $query = $this->db->get_where('admins');
+                        $adminCount = $this->db->affected_rows();
+                    ?>
+
+                    <section class="cards">
+                        <a href="<?php echo base_url(); ?>admin/students/all"><i class="fa fa-user-graduate"></i>
+                            <div class="cards_body">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span><?php echo $studentCount; ?></span>
+                                <p>Registered Students</p>
+                            </div>
+                        </a>
+
+                        <a href="<?php echo base_url(); ?>admin/tutors"><i class="fa fa-user-graduate"></i>
+                            <div class="cards_body">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span><?php echo $tutorCount; ?></span>
+                                <p>Registered Tutors</p>
+                            </div>
+                        </a>
+                        <a href="<?php echo base_url(); ?>admin/admins"><i class="fa fa-user-graduate"></i>
+                            <div class="cards_body">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span><?php echo $adminCount; ?></span>
+                                <p>Registered Admins</p>
+                            </div>
+                        </a>
                     </section>
-                </section> -->
+                </section>
             </section>
         </section>
 
