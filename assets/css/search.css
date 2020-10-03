@@ -1,0 +1,89 @@
+.filter {
+	display: flex;
+	align-items: center;
+	font-size: 1.4rem;
+}
+
+.filter--button {
+	height: 40px;
+	line-height: 0;
+	padding: 5px 4px;
+	width: 100px;
+}
+
+.filter-review {
+	height: 40px;
+	line-height: 0;
+	margin: 0;
+	margin-left: 20px;
+	width: 200px;
+}
+
+.courses {
+	display: flex;
+}
+
+aside .form-group {
+	width: 250px;
+	margin-bottom: 3px;
+}
+
+.courses--grid-item {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	border-bottom: 1px solid grey;
+	padding: 20px 2px;
+	gap: 10px;
+}
+
+.courses--grid-item:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.courses--grid-item img {
+	align-self: start;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+@media (max-width: 890px) {
+	.courses--grid-item {
+		grid-template-columns: 1fr;
+	}
+
+	.courses--grid-item img {
+		width: 80%;
+	}
+}
+
+@media (max-width: 650px) {
+	aside {
+		display: none;
+		position: absolute;
+		background: white;
+		padding: 20px 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	.total h1 {
+		font-size: 2rem;
+	}
+
+	.filter {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.filter-review {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.courses--grid-item img {
+		width: 100%;
+	}
+}

@@ -52,28 +52,6 @@
 	text-decoration: none;
 }
 
-.footer {
-	background: #343434;
-	display: flex;
-	padding: 10px 5px;
-	padding-bottom: 20px;
-	justify-content: center;
-	text-align: center;
-}
-.footer .nav-container {
-	width: 150px;
-}
-.footer__header {
-	color: white;
-}
-.footer ul {
-	list-style: none;
-}
-.footer a {
-	color: white;
-	line-height: 10px;
-}
-
 .steps {
 	background: #f8f8f8;
 }
@@ -150,14 +128,6 @@
 	}
 }
 
-@media (max-width: 550px) {
-	.footer {
-		flex-direction: column;
-	}
-	.footer .nav-container {
-		width: 99%;
-	}
-}
 @media (max-width: 800px) {
 	.main-header {
 		font-size: 1.8rem;

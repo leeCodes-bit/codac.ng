@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -72,6 +72,7 @@ $route['blog'] = 'app/blog';
 $route['news'] = 'app/newspress';
 $route['faq'] = 'app/faq';
 $route['quiz'] = 'app/quiz';
+$route['search'] = 'app/search';
 
 
 

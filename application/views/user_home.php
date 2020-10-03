@@ -7,24 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <meta name='keywords' content='Codec, E-learning,favourite courses' />
-  <meta name='description'
-    content='E-learning site, where registered students learn there favourite courses at their own pace' />
+  <meta name='description' content='E-learning site, where registered students learn there favourite courses at their own pace' />
 
 
   <meta property="og:title" content="Codec | E-learning,favourite courses" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="">
   <meta property="og:url" content="" />
-  <meta property="og:description"
-    content="E-learning site, where registered students learn there favourite courses at their own pace" />
+  <meta property="og:description" content="E-learning site, where registered students learn there favourite courses at their own pace" />
 
   <meta name="twitter:card" content="">
   <meta name="twitter:site" content="">
   <meta name="twitter:creator" content="">
   <meta name="twitter:url" content="">
   <meta name="twitter:title" content="Codec | E-learning,favourite courses">
-  <meta name="twitter:description"
-    content="E-learning site, where registered students learn there favourite courses at their own pace">
+  <meta name="twitter:description" content="E-learning site, where registered students learn there favourite courses at their own pace">
   <meta name="twitter:image" content="">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
@@ -39,6 +36,7 @@
 
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/user_home.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/footer.css">
 
   <title>Home | E-learning</title>
 
@@ -69,8 +67,7 @@
           </div>
           <div class="form-group form__search m-0">
             <form class="form-inline my-2 my-lg-0" id="searchcourse">
-              <input maxlength="200" autocomplete="off" placeholder="Search for courses" id="autocomplete" name="search"
-                type="text" class="form-control form-control-lg topnav__search">
+              <input maxlength="200" autocomplete="off" placeholder="Search for courses" id="autocomplete" name="search" type="text" class="form-control form-control-lg topnav__search">
               <button class="topnav__search-btn btn btn-primary">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
@@ -368,24 +365,19 @@
     <div class="courses__type text-center w-100">
       <ul class="nav nav-tabs " id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link hvr-left text-dark" id="trending-tab" data-toggle="tab" href="#trending" role="tab"
-            aria-controls="trending" aria-selected="true">Suggested For You</a>
+          <a class="nav-link hvr-left text-dark" id="trending-tab" data-toggle="tab" href="#trending" role="tab" aria-controls="trending" aria-selected="true">Suggested For You</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark hvr-left" id="popular-tab" data-toggle="tab" href="#popular" role="tab"
-            aria-controls="popular" aria-selected="false">My Courses</a>
+          <a class="nav-link text-dark hvr-left" id="popular-tab" data-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="false">My Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab"
-            aria-controls="recent" aria-selected="false">Trending Courses</a>
+          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Trending Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab"
-            aria-controls="recent" aria-selected="false">Most Popular Courses</a>
+          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Most Popular Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab"
-            aria-controls="recent" aria-selected="false">Most Recent Courses</a>
+          <a class="nav-link hvr-left text-dark" id="recent-tab" data-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Most Recent Courses</a>
         </li>
       </ul>
       <div class="courses__bg py-2">
@@ -418,8 +410,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -449,8 +440,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -481,8 +471,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -512,8 +501,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -544,8 +532,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -575,8 +562,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -606,8 +592,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -637,8 +622,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -668,8 +652,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -699,8 +682,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -730,8 +712,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -761,8 +742,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -798,8 +778,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -829,8 +808,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -860,8 +838,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -891,8 +868,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -924,8 +900,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -955,8 +930,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -986,8 +960,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1017,8 +990,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1050,8 +1022,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1081,8 +1052,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1113,8 +1083,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1144,8 +1113,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1182,8 +1150,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1213,8 +1180,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1244,8 +1210,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1275,8 +1240,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1308,8 +1272,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1339,8 +1302,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1370,8 +1332,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1401,8 +1362,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1434,8 +1394,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1465,8 +1424,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1497,8 +1455,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1528,8 +1485,7 @@
                       <p class="card-text small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti
                         veritatis
                         placeat? Commodi, dolorem consequatur.</p>
-                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question"
-                          aria-hidden="true"></i></a>
+                      <a href="#" class="nav-link">More Information <i class="ml-1 fa fa-question question" aria-hidden="true"></i></a>
 
                     </div>
                   </div>
@@ -1578,8 +1534,7 @@
     <div class="slider review padding-one">
       <div class="review__stories">
         <figure class="stories__shape">
-          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362578/befitassets/img/customer1_utnvds.png"
-            alt="" class="rounded-circle">
+          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362578/befitassets/img/customer1_utnvds.png" alt="" class="rounded-circle">
         </figure>
         <div class="stories__text">
           <p>
@@ -1591,8 +1546,7 @@
       </div>
       <div class="review__stories">
         <figure class="stories__shape">
-          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362584/befitassets/img/customer2_jkw9bn.png"
-            alt="" class="rounded-circle">
+          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362584/befitassets/img/customer2_jkw9bn.png" alt="" class="rounded-circle">
         </figure>
         <div class="stories__text opacify">
           <p>
@@ -1604,8 +1558,7 @@
       </div>
       <div class="review__stories">
         <figure class="stories__shape">
-          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362588/befitassets/img/customer3_vozygg.png"
-            alt="" class="rounded-circle">
+          <img src="https://res.cloudinary.com/osdev/image/upload/v1570362588/befitassets/img/customer3_vozygg.png" alt="" class="rounded-circle">
         </figure>
         <div class="stories__text opacify">
           <p>
@@ -1648,136 +1601,7 @@
         <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
       </span>
     </a>
-    <footer class="footer section-padding">
-      <div class="navigation__container w-100">
-        <div class="footer__navigation">
-          <img src="<?php echo base_url(); ?>assets/img/footer-triangles.png" alt="footer bg" class="footer__bg">
-          <div class="container">
-            <div class="nav-container">
-              <h6 class="footer__header one">ABOUT CODEC
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum lolo</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header three">LEARNING
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum </a>
-                </li>
-
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header two">MORE
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Lorem ipsum</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header four">CONNECT
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2">Customer Support</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer__copyright text-light py-3">
-
-          <ul class="copyright__links">
-            <h5 class="title">CODEC</h5>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                &copy; Codec 2019
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Privacy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Terms
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Cookie Policy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Sitemap
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <?php include('fragments/footer.php'); ?>
   </section>
 
   <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>

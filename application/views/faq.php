@@ -24,10 +24,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/nav.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/faq.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/footer.css">
   <title>Codac | Faq </title>
 </head>
 
-<body>
+<body id="home">
   <!-- HEADER SECTION -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
@@ -274,120 +275,14 @@
     </div> -->
   </section>
 
-<!-- FOOTER SECTION -->
+  <!-- FOOTER SECTION -->
   <section id="footer" class="footer w-100">
     <a href="#home" class="text-light">
       <span class="footer__go-up text-light">
         <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
       </span>
     </a>
-    <footer class="footer section-padding">
-      <div class="navigation__container w-100">
-        <div class="footer__navigation">
-          <div class="container-fluid px-4">
-            <div class="nav-container">
-              <h6 class="footer__header one">ABOUT CODAC
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">About</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header three">LEARNING
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">News</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Blog</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header two">MORE
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Faq</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Certificate</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-container">
-              <h6 class="footer__header four">CONNECT
-                <hr>
-              </h6>
-              <ul class="footer__links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer__copyright text-light py-3">
-
-          <ul class="copyright__links">
-            <a href="<?php echo base_url(); ?>" class="navbar-brand text-light">
-              <img src="<?php echo base_url(); ?>assets/img/codaclogo.png" alt="Codac Logo">
-            </a>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                &copy; Codac 2019
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Privacy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Terms
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Cookie Policy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Sitemap
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <?php include('fragments/footer.php'); ?>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

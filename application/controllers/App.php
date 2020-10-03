@@ -17,24 +17,25 @@ class App extends CI_Controller
 		$this->load->library('email'); //Load the library
 	}
 
-	public function auth() {
+	public function auth()
+	{
 		if ($this->input->cookie('userId', true) == '') {
 			redirect(base_url());
 		}
-
 	}
 
 	// new pages hayjay
-	public function courseInfo() {
+	public function courseInfo()
+	{
 		$this->load->view('courseInfo');
 		// the route for this will be localhost/codac.ng/app/courseInfo
 		// you missed /app after localhost
-		
+
 	}
 
 	// end of new pages footer links
 
-	
+
 	public function index()
 	{
 		$this->load->view('index');
@@ -172,7 +173,7 @@ class App extends CI_Controller
 
 			echo '<div class="alert alert-success alert-dismissible">
 			  <button type="button" class="close" data-dismiss="alert">&times;</button>
-			  <strong>Success!</strong> Your registration was successfull, Check your inbox ('.$email.') for instructions to activate your account.
+			  <strong>Success!</strong> Your registration was successfull, Check your inbox (' . $email . ') for instructions to activate your account.
 			</div>';
 
 			// send mail here
@@ -182,8 +183,8 @@ class App extends CI_Controller
 
 			// Email body content
 			$message = '<h1>Your Account was successfully Created</h1>
-			<p>Click <a href="'.$activationLink.'"> here to Activate Your Account</a></p>
-			<p>If you have problems clicking on the link, copy and paste this url: '.$activationLink.' in the address bar or your browser</p>
+			<p>Click <a href="' . $activationLink . '"> here to Activate Your Account</a></p>
+			<p>If you have problems clicking on the link, copy and paste this url: ' . $activationLink . ' in the address bar or your browser</p>
 			';
 
 			// $this->send($email, 'Activate Your Account', $body);
@@ -204,7 +205,8 @@ class App extends CI_Controller
 		}
 	}
 
-	public function forgotPasswordAction() {
+	public function forgotPasswordAction()
+	{
 		$email = $_POST['forgotPasswordEmail'];
 		$clean = true;
 
@@ -217,10 +219,10 @@ class App extends CI_Controller
 			// email is valid
 			// check if email exist in db
 			$query = $this->db->get_where('users', array("email" => $email));
-			if($this->db->affected_rows() > 0) {
+			if ($this->db->affected_rows() > 0) {
 				// email exist, send activation link
 				$res = $query->result_array();
-				foreach($res as $val) {
+				foreach ($res as $val) {
 					$resetCode = $val['activation_code'];
 					$fullname = $val['fullname'];
 				}
@@ -231,9 +233,9 @@ class App extends CI_Controller
 			}
 		}
 
-		if($clean == true) {
+		if ($clean == true) {
 			// send mail to user
-			$link = base_url(). 'resetPassword/'. $resetCode;
+			$link = base_url() . 'resetPassword/' . $resetCode;
 			$message = $this->passwordReset($fullname, $link);
 			$this->load->library('email');
 			$this->email->from('noreply@codac.ng', 'CODAC');
@@ -251,12 +253,13 @@ class App extends CI_Controller
 		}
 	}
 
-	public function resetPassword($code) {
+	public function resetPassword($code)
+	{
 		$query = $this->db->get_where('users', array('activation_code' => $code));
-		if($this->db->affected_rows() > 0) {
+		if ($this->db->affected_rows() > 0) {
 			// code found, get details of code
 			$res = $query->result_array();
-			foreach($res as $user) {
+			foreach ($res as $user) {
 				$userId = $user["user_id"];
 				$email = $user['email'];
 			}
@@ -266,14 +269,14 @@ class App extends CI_Controller
 				'email' => $email
 			);
 			$this->load->view('resetpassword', $data);
-
 		} else {
 			// no code found
 			echo '<h3>Invalid Code</h3>';
 		}
 	}
 
-	public function resetPasswordAction() {
+	public function resetPasswordAction()
+	{
 		// get form values
 		$clean = true;
 		$errors = array();
@@ -283,19 +286,19 @@ class App extends CI_Controller
 		$confirmPassword = $this->input->post('confirmPassword');
 
 		// validate password
-		if(strlen($password) < 6) {
+		if (strlen($password) < 6) {
 			// password length too short
 			$errors['length'] = 'Your new password must have at least 6 characters';
 			$clean = false;
 		}
 
-		if($password != $confirmPassword) {
+		if ($password != $confirmPassword) {
 			// password match
 			$errors['match'] = 'Your new passwords do not match';
 			$clean = false;
 		}
 
-		if($clean == true) {
+		if ($clean == true) {
 			// hash it
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -306,18 +309,16 @@ class App extends CI_Controller
 			$this->db->set($data);
 			$this->db->where('user_id', $userId);
 			$updateRes = $this->db->update('users');
-			if($updateRes > 0) {
-				redirect(base_url().'resetPassword/'.$code.'?success');
+			if ($updateRes > 0) {
+				redirect(base_url() . 'resetPassword/' . $code . '?success');
 			} else {
-				redirect(base_url().'resetPassword/'.$code.'?error');
+				redirect(base_url() . 'resetPassword/' . $code . '?error');
 			}
-
 		} else {
 			$errors['userId'] = $userId;
 			$errors['code'] = $code;
 			$this->load->view('resetpassword', $errors);
 		}
-
 	}
 
 	public function dashboard()
@@ -326,7 +327,8 @@ class App extends CI_Controller
 		$this->load->view('dashboard');
 	}
 
-	public function applyForApproval() {
+	public function applyForApproval()
+	{
 		$data = array(
 			'tutor_id' => $this->input->post('tutor_id'),
 			'linkedin_link' => $this->input->post('linkedin_link'),
@@ -486,21 +488,20 @@ class App extends CI_Controller
 				}
 
 				if ($selectedRole != $role) {
-					if($role == 'student') {
+					if ($role == 'student') {
 						echo '<div class="alert alert-danger alert-dismissible">
 						  <button type="button" class="close" data-dismiss="alert">&times;</button>
 						  <strong>Error!</strong> You do not have access to login as an Instructor.
-							<a href="'.base_url().'">Back to Student portal</a>
+							<a href="' . base_url() . '">Back to Student portal</a>
 						</div>';
 						return false;
 					} else {
 						echo '<div class="alert alert-danger alert-dismissible">
 						  <button type="button" class="close" data-dismiss="alert">&times;</button>
 						  <strong>Error!</strong> You do not have access to login as a Student.
-							<a href="'.base_url().'/tutors">Instructor Portal</a>
+							<a href="' . base_url() . '/tutors">Instructor Portal</a>
 						</div>';
 						return false;
-
 					}
 				}
 
@@ -566,23 +567,25 @@ class App extends CI_Controller
 		}
 	}
 
-	public function studentdashboard() {
+	public function studentdashboard()
+	{
 
 		$this->auth();
 
 		$this->load->view('studentdashboard');
 	}
 
-	public function studentProfile() {
+	public function studentProfile()
+	{
 
 		$this->auth();
 
 		$userId = $this->input->cookie('userId', true);
 		$query = $this->db->get_where('users', array("user_id" => $userId));
-		if($this->db->affected_rows() > 0) {
+		if ($this->db->affected_rows() > 0) {
 			// user found
 			$res = $query->result_array();
-			foreach($res as $val) {
+			foreach ($res as $val) {
 				$fullname = $val["fullname"];
 				$email = $val["email"];
 				$subscribeToMails = $val["subscribe_to_mails"];
@@ -593,8 +596,10 @@ class App extends CI_Controller
 				$gender = $val["gender"];
 			}
 			$name = array();
-			$name = (explode(" ",$fullname));
-			if(!isset($name[1])) { $name[1] = ''; }
+			$name = (explode(" ", $fullname));
+			if (!isset($name[1])) {
+				$name[1] = '';
+			}
 			$data = array(
 				'firstname' => $name[0],
 				'lastname' => $name[1],
@@ -610,11 +615,12 @@ class App extends CI_Controller
 			$this->load->view('studentprofile', $data);
 		} else {
 			// no user found
-			echo '<h3>Please contact the adminstrator '.$userId.'</h3>';
+			echo '<h3>Please contact the adminstrator ' . $userId . '</h3>';
 		}
 	}
 
-	public function editStudentProfileAction() {
+	public function editStudentProfileAction()
+	{
 
 		$this->auth();
 
@@ -636,23 +642,25 @@ class App extends CI_Controller
 		$this->db->set($data);
 		$this->db->where('user_id', $userId);
 		$updateRes = $this->db->update('users');
-		if($updateRes > 0) {
-			redirect(base_url().'studentProfile');
+		if ($updateRes > 0) {
+			redirect(base_url() . 'studentProfile');
 		} else {
-			redirect(base_url().'studentProfile?error');
+			redirect(base_url() . 'studentProfile?error');
 		}
 
 		// return to profile page
 	}
 
-	public function profilePicture() {
+	public function profilePicture()
+	{
 
 		$this->auth();
 
 		$this->load->view('profilepicture');
 	}
 
-	public function uploadPhoto($fieldName) {
+	public function uploadPhoto($fieldName)
+	{
 		$config['upload_path'] = './assets/img/profile-pictures';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size'] = 10000;
@@ -661,7 +669,7 @@ class App extends CI_Controller
 
 		$this->load->library('upload', $config);
 
-		if(empty($_FILES[$fieldName]['name'])) {
+		if (empty($_FILES[$fieldName]['name'])) {
 			return "";
 		}
 
@@ -676,12 +684,13 @@ class App extends CI_Controller
 		}
 	}
 
-	public function uploadPictureAction() {
+	public function uploadPictureAction()
+	{
 
 		$this->auth();
 
 		$result = $this->uploadPhoto('profilePicture');
-		if( (is_array($result))  ) {
+		if ((is_array($result))) {
 			// image was not uploaded, show error messages
 			$data = array(
 				'imageError' => $result['error']
@@ -697,10 +706,10 @@ class App extends CI_Controller
 			$this->db->where('user_id', $this->input->cookie('userId', true));
 			$updateRes = $this->db->update('users');
 
-			if($updateRes > 0) {
-				redirect(base_url().'studentProfile?success');
+			if ($updateRes > 0) {
+				redirect(base_url() . 'studentProfile?success');
 			} else {
-				redirect(base_url().'studentProfile?error');
+				redirect(base_url() . 'studentProfile?error');
 			}
 		}
 	}
@@ -786,28 +795,39 @@ class App extends CI_Controller
 
 
 
-	public function faq() {
+	public function faq()
+	{
 		$this->load->view('faq');
 	}
 
-	public function blog() {
+	public function blog()
+	{
 		$this->load->view('blog');
 	}
 
-	public function newspress() {
+	public function newspress()
+	{
 		$this->load->view('newspress');
 	}
 
-	public function referfriend() {
+	public function referfriend()
+	{
 		$this->load->view('refer-friend');
 	}
 
-	public function testimony() {
+	public function testimony()
+	{
 		$this->load->view('testimony');
 	}
 
-		public function quiz() {
+	public function quiz()
+	{
 		$this->load->view('quiz');
+	}
+
+	public function search()
+	{
+		$this->load->view('search');
 	}
 
 

@@ -7,24 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name='keywords' content='Codec, E-learning,favourite courses' />
-    <meta name='description'
-        content='E-learning site, where registered students learn there favourite courses at their own pace' />
+    <meta name='description' content='E-learning site, where registered students learn there favourite courses at their own pace' />
 
 
     <meta property="og:title" content="Codec | E-learning,favourite courses" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="">
     <meta property="og:url" content="" />
-    <meta property="og:description"
-        content="E-learning site, where registered students learn there favourite courses at their own pace" />
+    <meta property="og:description" content="E-learning site, where registered students learn there favourite courses at their own pace" />
 
     <meta name="twitter:card" content="">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="">
     <meta name="twitter:url" content="">
     <meta name="twitter:title" content="Codec | E-learning,favourite courses">
-    <meta name="twitter:description"
-        content="E-learning site, where registered students learn there favourite courses at their own pace">
+    <meta name="twitter:description" content="E-learning site, where registered students learn there favourite courses at their own pace">
     <meta name="twitter:image" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
@@ -40,6 +37,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/user_home.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/start_course.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/footer.css">
     <title>Start A course | E-learning</title>
 
 </head>
@@ -69,8 +67,7 @@
                     </div>
                     <div class="form-group form__search m-0">
                         <form class="form-inline my-2 my-lg-0" id="searchcourse">
-                            <input maxlength="200" autocomplete="off" placeholder="Search for courses" id="autocomplete"
-                                name="search" type="text" class="form-control form-control-lg topnav__search">
+                            <input maxlength="200" autocomplete="off" placeholder="Search for courses" id="autocomplete" name="search" type="text" class="form-control form-control-lg topnav__search">
                             <button class="topnav__search-btn btn btn-primary">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
@@ -357,24 +354,21 @@
             <div class="main_content">
 
                 <?php
-                    if(isset($_GET['success'])) {
-                        echo '<h4 style="margin-top: 15px; color: green;">Comment added successfully</h4>';
-                    } 
-                    if(isset($_GET['error'])) {
-                        echo '<h4 style="margin-top: 15px; color: red;">There was an error.</h4>';
-                    } 
+                if (isset($_GET['success'])) {
+                    echo '<h4 style="margin-top: 15px; color: green;">Comment added successfully</h4>';
+                }
+                if (isset($_GET['error'])) {
+                    echo '<h4 style="margin-top: 15px; color: red;">There was an error.</h4>';
+                }
 
                 ?>
-                
+
                 <section class="advert adv1">
                     <section class="video_container">
                         <div class="video_item">
                             <!-- <iframe src="https://www.youtube.com/embed/5j46WgqUwCQ" frameborder="0"
                                 class="video"></iframe> -->
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $videoUrl; ?>" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $videoUrl; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </section>
                 </section>
@@ -420,8 +414,7 @@
                                 <span><i class="fa fa-angle-down angleDown"></i></span>
                             </div>
                             <div class="follow">
-                                <textarea placeholder="Start taking notes here...You can download them too" name="notes"
-                                    id="notes" cols="30" rows="10"></textarea>
+                                <textarea placeholder="Start taking notes here...You can download them too" name="notes" id="notes" cols="30" rows="10"></textarea>
                                 <aside>
                                     <span><i class="fa fa-download"></i></span>
                                     <span><i class="fas fa-envelope-open-text"></i></span>
@@ -443,8 +436,7 @@
                                 <div class="form_group">
                                     <form method="post" action="<?php echo base_url(); ?>commentOnCourse">
                                         <input type="hidden" name="courseId" value="<?php echo $courseId; ?>">
-                                        <input type="text" name="comment" id="comment"
-                                            placeholder="Discuss this topic here..." required>
+                                        <input type="text" name="comment" id="comment" placeholder="Discuss this topic here..." required>
                                         <input type="submit" value="Submit Comment" id="submit">
                                     </form>
                                 </div>
@@ -453,35 +445,35 @@
                                 <p>or, if you need Customer Support, <a href="#">click here</a></p>
 
                                 <?php
-                                    // $query = $this->db->get_where('course_comments', array('course_id' => $courseId)); 
+                                // $query = $this->db->get_where('course_comments', array('course_id' => $courseId)); 
 
-                                    $query = $this->db->query("
+                                $query = $this->db->query("
                                         SELECT *
                                         FROM course_comments WHERE course_id = $courseId
                                         ORDER BY comment_id DESC
                                     ");
 
-                                    $noOfComments = $this->db->affected_rows();
-                                    if($noOfComments > 0) {
-                                        // there are comments
-                                        $commentRes = $query->result_array();
-                                        foreach($commentRes as $comment) {
-                                            // get user name
-                                            $userQuery = $this->db->get_where('users', array('user_id' => $comment['user_id']));
-                                            $userCount = $this->db->affected_rows();
-                                            if($userCount > 0) {
-                                                // user found
-                                                $userRes = $userQuery->result_array();
-                                                foreach($userRes as $user) {
-                                                    $fullname = $user['fullname'];
-                                                }
-                                            } else {
-                                                // no user found
+                                $noOfComments = $this->db->affected_rows();
+                                if ($noOfComments > 0) {
+                                    // there are comments
+                                    $commentRes = $query->result_array();
+                                    foreach ($commentRes as $comment) {
+                                        // get user name
+                                        $userQuery = $this->db->get_where('users', array('user_id' => $comment['user_id']));
+                                        $userCount = $this->db->affected_rows();
+                                        if ($userCount > 0) {
+                                            // user found
+                                            $userRes = $userQuery->result_array();
+                                            foreach ($userRes as $user) {
+                                                $fullname = $user['fullname'];
                                             }
-                                            echo '
+                                        } else {
+                                            // no user found
+                                        }
+                                        echo '
                                                 <div style="margin-bottom:8px;">
                                                 <article class="comment_img">
-                                                    <img src="'.base_url().'assets/img/user.png" alt="">
+                                                    <img src="' . base_url() . 'assets/img/user.png" alt="">
                                                 </article>
                                                 <article>
                                                     <p><img src="<?php echo base_url(); ?>assets/img/south africa flag.jpg" alt=""> <span></span></p>
@@ -489,18 +481,18 @@
                                                         <a href=""><i class="fa fa-thumbs-up"></i>20</a>
                                                         <a href=""><i class="fa fa-thumbs-down"></i>1</a>
                                                     </p>
-                                                    <p>'.$comment['comment'].'</p>
+                                                    <p>' . $comment['comment'] . '</p>
                                                 </article>
                                             </div>
                                             ';
-                                        }
-                                    } else {
-                                        // no comments
                                     }
-                                   
+                                } else {
+                                    // no comments
+                                }
+
                                 ?>
 
-                               
+
 
                             </aside>
                         </div>
@@ -516,141 +508,7 @@
                 <i class="fa fa-angle-up arrow-up" aria-hidden="true"></i>
             </span>
         </a>
-        <footer class="footer section-padding">
-            <div class="navigation__container w-100">
-                <div class="footer__navigation">
-                    <img src="<?php echo base_url(); ?>assets/img/footer-triangles.png" alt="footer bg" class="footer__bg">
-                    <div class="container">
-                        <div class="nav-container">
-                            <h6 class="footer__header one">ABOUT CODEC
-                                <hr>
-                            </h6>
-                            <ul class="footer__links">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum lolo</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="nav-container">
-                            <h6 class="footer__header three">LEARNING
-                                <hr>
-                            </h6>
-                            <ul class="footer__links">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="nav-container">
-                            <h6 class="footer__header two">MORE
-                                <hr>
-                            </h6>
-                            <ul class="footer__links">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Lorem ipsum</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="nav-container">
-                            <h6 class="footer__header four">CONNECT
-                                <hr>
-                            </h6>
-                            <ul class="footer__links">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-facebook" aria-hidden="true"></i><span class="ml-2">Facebook
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-instagram" aria-hidden="true"></i><span
-                                            class="ml-2">Instagram</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i><span class="ml-2"> Linkedin
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i><span
-                                            class="ml-2">Twitter</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2">Customer
-                                            Support</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__copyright text-light py-3">
-
-                    <ul class="copyright__links">
-                        <h5 class="title">CODEC</h5>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                &copy; Codec 2019
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Privacy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Terms
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Cookie Policy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Sitemap
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        <?php include('fragments/footer.php'); ?>
     </section>
 
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>

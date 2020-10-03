@@ -64,7 +64,8 @@
 	z-index: 5;
 	height: 100%;
 	transition: 0.4s;
-	background: #52143e;
+	background: white;
+	box-shadow: 2px 4px 5px 0.1px gainsboro;
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -79,13 +80,16 @@
 	padding: 15px 5px;
 }
 .sidebar__nav ul li:hover {
-	background-color: #853c6c;
+	background-color: black;
+}
+.sidebar__nav ul li:hover a {
+	color: white;
 }
 .sidebar__nav ul a {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: white;
+	color: black;
 	font-size: 1.2rem;
 	padding: 0 2px;
 }
@@ -110,15 +114,23 @@
 	display: flex;
 	align-items: center;
 	padding: 30px 25px;
-	justify-content: space-between;
+	flex: 1;
 	cursor: pointer;
 }
+
+.footer__copyright {
+	width: 50%;
+}
+
 .footer ul {
+	width: 50%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
+	justify-content: flex-end;
 }
+
 .footer ul a {
 	font-size: 0.9rem;
 }
@@ -127,24 +139,6 @@
 }
 .footer img {
 	width: 50px;
-}
-.footer .lang {
-	outline: 1px solid black;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 30px;
-	padding: 0.4rem 0.7rem;
-	width: 130px;
-}
-.footer .lang .list-group-item {
-	border: none;
-	outline: none;
-}
-.footer .lang .list-group-item a {
-	color: black;
-	opacity: 0.9;
-	text-decoration: none;
 }
 
 .mobile-nav {
@@ -384,6 +378,49 @@
 	display: inline-block;
 	width: 100%;
 	padding: 20px 0.4rem;
+}
+
+.profile {
+	width: 80%;
+	margin: auto;
+}
+
+.profile__dashboard p {
+	width: 99%;
+	margin: auto;
+}
+
+.profile form {
+	width: 100%;
+}
+
+.profile .form-bg {
+	padding: 30px 30px 0;
+	width: 100%;
+	background-color: #ecf1f5;
+}
+.profile label {
+	display: block;
+	font-size: 1.3rem;
+}
+.profile .about-info {
+	padding: 10px;
+	color: #465159;
+	border-radius: 5px;
+	margin-bottom: 28px;
+	min-height: 150px;
+	width: 100%;
+}
+.profile .about-info:focus {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+.profile .form-details-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	gap: 10px;
 }
 
 .communication {
@@ -679,20 +716,38 @@ main {
 	}
 }
 @media (max-width: 750px) {
+	.profile .form-details-container {
+		grid-template-columns: 1fr;
+	}
+
 	.footer {
 		position: relative;
 		display: inline-block;
 	}
+
+	.footer__copyright {
+		width: 100%;
+		text-align: center;
+	}
+
 	.footer ul {
 		width: 100%;
+		text-align: center;
 		justify-content: center;
 	}
-	.footer .lang {
-		position: absolute;
-		top: 10px;
-		right: 10px;
+}
+
+@media (max-width: 500px) {
+	.profile {
+		width: 95%;
+	}
+
+	main {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
+
 *,
 *::before,
 *::after {

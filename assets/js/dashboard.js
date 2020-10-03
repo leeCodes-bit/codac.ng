@@ -35,6 +35,16 @@ function showPage(e) {
 
   }
 
+  if (target.classList.contains('show-profile')) {
+    //get dom elements
+    let profile = document.querySelector('.profile');
+    let profileBorder = document.querySelector('.profileBorder');
+
+    //add classes to element
+    profile.classList.add('show');
+    profileBorder.classList.add('active-list');
+  }
+
   if (target.classList.contains('show-perf')) {
     //get dom elements
     let overview = document.querySelector('.overview');
