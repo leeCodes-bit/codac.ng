@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name='keywords' content='Codec, E-learning,favourite courses' />
+    <meta name='keywords' content='Codac, E-learning,favourite courses' />
     <meta name='description' content='E-learning site, where registered students learn there favourite courses at their own pace' />
 
 
@@ -445,7 +445,7 @@
                                 <p>or, if you need Customer Support, <a href="#">click here</a></p>
 
                                 <?php
-                                // $query = $this->db->get_where('course_comments', array('course_id' => $courseId)); 
+                                // $query = $this->db->get_where('course_comments', array('course_id' => $courseId));
 
                                 $query = $this->db->query("
                                         SELECT *
