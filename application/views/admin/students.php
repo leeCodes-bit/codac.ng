@@ -29,7 +29,7 @@
                             <a href="<?php echo base_url(); ?>admin/students/inactive"><button id="deactivated">Deactivated Students</button></a>
                         </p>
                         <div>
-                            <?php 
+                            <?php
                                 if(isset($_GET["activated"])) {
                                     echo '<h4 style="color:green; text-align: center;">Student Activated Successfully</h4>';
                                 }
@@ -66,7 +66,7 @@
                                     $query = $this->db->get_where('users', array("role" => "student"));
                                   }
 
-                                    
+
                                     if($this->db->affected_rows() > 0) {
                                       // admins found
                                       $sn = 1;

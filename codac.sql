@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2020 at 11:07 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Nov 10, 2020 at 11:10 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -35,7 +34,7 @@ CREATE TABLE `admins` (
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` varchar(20) NOT NULL,
-  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `datetime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `code` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -44,7 +43,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `firstname`, `lastname`, `email`, `password`, `role`, `datetime`, `code`) VALUES
-(13, 'John', 'Ebri', 'johnebri18@gmail.com', '$2y$10$OKVdaUj1YriBhiDD3.P.kOECqco1eMlO9NJvTQqImV/sP.A25sY.m', 'ROLE_SUPER_ADMIN', '2020-06-02 10:06:35', NULL),
+(13, 'John', 'Ebri', 'johnebri18@gmail.com', '$2y$10$S5n4L7bUXUWI8T0HDmdI8uCPCgInklydPzwddx36NTrnpFd6Yjeem', 'ROLE_SUPER_ADMIN', '2020-10-24 19:55:52', 'baveglFNXWcJ1EPKfVHs1603569321'),
 (16, 'John', 'Ebri', 'john.ebri@yahoo.com', '$2y$10$NlpUf8xGB02pLwzohYiEPOXeEOFAiNxLJIWEYVh1nsE5SYcyF7WS.', 'ROLE_ADMIN', '2020-07-22 07:47:21', 'qMlQ3dpCGni6asbBU1Rw1595403602');
 
 -- --------------------------------------------------------
@@ -132,28 +131,29 @@ CREATE TABLE `users` (
   `subscribe_to_mails` varchar(10) NOT NULL,
   `role` varchar(20) NOT NULL,
   `activation_code` varchar(100) NOT NULL,
-  `activated` int(11) NOT NULL DEFAULT '0',
+  `activated` int(11) NOT NULL DEFAULT 0,
   `date_time` datetime NOT NULL,
-  `personal_profile` text,
+  `personal_profile` text DEFAULT NULL,
   `country` varchar(50) DEFAULT NULL,
   `nationality` varchar(50) DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
   `gender` varchar(20) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `tutor_approved` int(11) NOT NULL DEFAULT '0'
+  `tutor_approved` int(11) NOT NULL DEFAULT 0,
+  `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `fullname`, `email`, `password`, `subscribe_to_mails`, `role`, `activation_code`, `activated`, `date_time`, `personal_profile`, `country`, `nationality`, `date_of_birth`, `gender`, `image`, `tutor_approved`) VALUES
-(1, 'kelvin', 'bayo4moon@gmail.com', '$2y$10$yWs6A.ODtOHwzywS7cELrO2ItV17D0SQ5kiU/Edkz.AjVzVfEPAAW', 'yes', 'student', 'cklPK1DCZbd4HGXx07YRtvLjF1588604713', 1, '2020-05-04 16:05:13', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(2, 'kudos', 'pillarcomweb@gmail.com', '$2y$10$.JclzomhCpuZNl4S9QM6seeagyhupATm2N.ARFlC3zCC2dkAYUoB2', 'yes', 'student', 'sA8IRudwtFvJ79xWhHzX5EjqG1588608700', 1, '2020-05-04 17:11:40', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(12, 'John Boss', 'john.ebri@yahoo.com', '$2y$10$zzMRtHCi5Lsy1qcaF2bzie1qQ44O6k/xUy5B.rb4hHJEQW61jG9eW', 'no', 'student', 'pKESPGzQn6cf5uqLvT8sFoebU1588665014', 1, '2020-05-05 08:50:14', 'Senior Developer', '  ', '', '0000-00-00', '', 'johnebrinew1.JPG', 0),
-(13, 'Lilian Ovrawah ', 'lilianovrawah@gmail.com', '$2y$10$6nF6k5vSwZoJK5NEFHQkJeITTF.Ka2LENMmgyeAxj4OWKI/CQhjP2', 'yes', 'student', 'rQvgCwn8lL1aNFMz0Tu5KmkUD1588700586', 1, '2020-05-05 18:43:06', NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(14, 'John Ebri', 'johnebri18@gmail.com', '$2y$10$AKNLBO2TNVgOgRotwlKJi.WRgifW4RqVAamiOQs928zUp.4hn7.5W', 'no', 'teacher', 'C5NjHtmJehVoYxQsIlAyUMwpa1589467645', 1, '2020-05-14 15:47:25', NULL, NULL, NULL, NULL, NULL, NULL, 2),
-(15, 'Johnson Abel', 'boyoskill@yahoo.com', '$2y$10$5X7UGYDsJwopLtU/jHdUqOh8zC4vGIYK43vb.yMu5srWUHXR3Wsx6', 'yes', 'teacher', 'FsQGY3ytBzj0OW6IHhX2LZSpo1590417065', 0, '2020-05-25 15:31:06', NULL, NULL, NULL, NULL, NULL, NULL, 0);
+INSERT INTO `users` (`user_id`, `fullname`, `email`, `password`, `subscribe_to_mails`, `role`, `activation_code`, `activated`, `date_time`, `personal_profile`, `country`, `nationality`, `date_of_birth`, `gender`, `image`, `tutor_approved`, `status`) VALUES
+(1, 'kelvin', 'bayo4moon@gmail.com', '$2y$10$yWs6A.ODtOHwzywS7cELrO2ItV17D0SQ5kiU/Edkz.AjVzVfEPAAW', 'yes', 'student', 'cklPK1DCZbd4HGXx07YRtvLjF1588604713', 1, '2020-05-04 16:05:13', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(2, 'kudos', 'pillarcomweb@gmail.com', '$2y$10$.JclzomhCpuZNl4S9QM6seeagyhupATm2N.ARFlC3zCC2dkAYUoB2', 'yes', 'student', 'sA8IRudwtFvJ79xWhHzX5EjqG1588608700', 1, '2020-05-04 17:11:40', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(12, 'John Boss', 'john.ebri@yahoo.com', '$2y$10$zzMRtHCi5Lsy1qcaF2bzie1qQ44O6k/xUy5B.rb4hHJEQW61jG9eW', 'no', 'student', 'pKESPGzQn6cf5uqLvT8sFoebU1588665014', 1, '2020-05-05 08:50:14', 'Senior Developer', '  ', '', '0000-00-00', '', 'johnebrinew1.JPG', 0, 0),
+(13, 'Lilian Ovrawah ', 'lilianovrawah@gmail.com', '$2y$10$6nF6k5vSwZoJK5NEFHQkJeITTF.Ka2LENMmgyeAxj4OWKI/CQhjP2', 'yes', 'student', 'rQvgCwn8lL1aNFMz0Tu5KmkUD1588700586', 1, '2020-05-05 18:43:06', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(14, 'John Ebri', 'johnebri18@gmail.com', '$2y$10$AKNLBO2TNVgOgRotwlKJi.WRgifW4RqVAamiOQs928zUp.4hn7.5W', 'no', 'teacher', 'C5NjHtmJehVoYxQsIlAyUMwpa1589467645', 1, '2020-05-14 15:47:25', NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL),
+(15, 'Johnson Abel', 'boyoskill@yahoo.com', '$2y$10$5X7UGYDsJwopLtU/jHdUqOh8zC4vGIYK43vb.yMu5srWUHXR3Wsx6', 'yes', 'teacher', 'FsQGY3ytBzj0OW6IHhX2LZSpo1590417065', 0, '2020-05-25 15:31:06', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL);
 
 --
 -- Indexes for dumped tables
