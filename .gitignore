@@ -31,3 +31,6 @@ yarn-error.log*
 slick
 
 /application/config/database
+
+/application/config/config.php
+/application/config/database.php
